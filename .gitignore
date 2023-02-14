@@ -45,3 +45,4 @@ app.*.map.json
 
 # Melos related
 pubspec_overrides.yaml
+libs/gmana_slider/.flutter-plugins-dependencies

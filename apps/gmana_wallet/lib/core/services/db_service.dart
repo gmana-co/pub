@@ -46,7 +46,11 @@ abstract class DbService<T> {
 
   Future<Map<String, dynamic>> findById(String id) async {
     _logger.i('${tableName()} $id');
-    final response = await client.from(tableName()).select<PostgrestMap>().eq('id', id).single();
+    final response = await client
+        .from(tableName())
+        .select<PostgrestMap>()
+        .eq('id', id)
+        .single();
     _logger.i(response);
     return response;
   }

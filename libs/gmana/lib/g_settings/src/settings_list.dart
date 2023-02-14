@@ -27,8 +27,9 @@ class SettingsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Ink(
-        color:
-            Theme.of(context).brightness == Brightness.light ? backgroundColor ?? lightBackgroundColor ?? backgroundGray : backgroundColor ?? darkBackgroundColor ?? Colors.black,
+        color: Theme.of(context).brightness == Brightness.light
+            ? backgroundColor ?? lightBackgroundColor ?? backgroundGray
+            : backgroundColor ?? darkBackgroundColor ?? Colors.black,
         child: ListView.builder(
           physics: physics,
           shrinkWrap: shrinkWrap,

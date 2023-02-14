@@ -14,5 +14,6 @@ class CurrencyModel with _$CurrencyModel {
     required String name_plural,
   }) = _CurrencyModel;
 
-  factory CurrencyModel.fromJson(Map<String, Object?> json) => _$CurrencyModelFromJson(json);
+  factory CurrencyModel.fromJson(Map<String, Object?> json) =>
+      _$CurrencyModelFromJson(json);
 }

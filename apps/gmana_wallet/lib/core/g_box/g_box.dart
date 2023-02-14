@@ -34,7 +34,8 @@ class GBox {
     }
 
     // open the encrypted box based on the key we put on the storage
-    encryptedBox = await Hive.openBox('vault', encryptionCipher: HiveAesCipher(keyInt));
+    encryptedBox =
+        await Hive.openBox('vault', encryptionCipher: HiveAesCipher(keyInt));
     await encryptedBox!.compact();
   }
 

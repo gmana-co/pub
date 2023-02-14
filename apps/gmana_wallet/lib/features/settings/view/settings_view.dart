@@ -24,7 +24,10 @@ class SettingsView extends HookConsumerWidget {
     final language = ref.watch(languageProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text(context.loc.settings, style: Theme.of(context).textTheme.headlineSmall))),
+      appBar: AppBar(
+          title: Center(
+              child: Text(context.loc.settings,
+                  style: Theme.of(context).textTheme.headlineSmall))),
       body: ListView(
         padding: const EdgeInsets.all(8),
         children: [
@@ -35,7 +38,8 @@ class SettingsView extends HookConsumerWidget {
               subtitle: const Text('012 311 739'),
               leading: const CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: CachedNetworkImageProvider('https://github.com/sunsreng.png'),
+                backgroundImage: CachedNetworkImageProvider(
+                    'https://github.com/sunsreng.png'),
               ),
               onTap: () => context.go('/settings/profile'),
               trailing: const Icon(Icons.arrow_forward_ios),
@@ -106,7 +110,8 @@ class SettingsView extends HookConsumerWidget {
             ),
           ),
           TextButton(
-            onPressed: () async => await Supabase.instance.client.auth.signOut(),
+            onPressed: () async =>
+                await Supabase.instance.client.auth.signOut(),
             child: const Text('Sign Out'),
           ),
         ],

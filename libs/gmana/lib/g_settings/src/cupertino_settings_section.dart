@@ -45,8 +45,10 @@ class CupertinoSettingsSection extends StatelessWidget {
     for (int i = 0; i < items.length; i++) {
       if (i < items.length - 1) {
         var leftPadding = 0.0;
-        if (items[i] is SettingsTile && (i < items.length - 1 && (items[i + 1] is SettingsTile))) {
-          leftPadding = (items[i] as SettingsTile).leading == null ? 15.0 : 54.0;
+        if (items[i] is SettingsTile &&
+            (i < items.length - 1 && (items[i + 1] is SettingsTile))) {
+          leftPadding =
+              (items[i] as SettingsTile).leading == null ? 15.0 : 54.0;
         }
 
         itemsWithDividers.add(items[i]);
@@ -66,7 +68,9 @@ class CupertinoSettingsSection extends StatelessWidget {
         ? Container(
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(20)),
-              color: Theme.of(context).brightness == Brightness.light ? CupertinoColors.white : iosTileDarkColor,
+              color: Theme.of(context).brightness == Brightness.light
+                  ? CupertinoColors.white
+                  : iosTileDarkColor,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -75,7 +79,9 @@ class CupertinoSettingsSection extends StatelessWidget {
           )
         : Container(
             decoration: BoxDecoration(
-              color: Theme.of(context).brightness == Brightness.light ? CupertinoColors.white : iosTileDarkColor,
+              color: Theme.of(context).brightness == Brightness.light
+                  ? CupertinoColors.white
+                  : iosTileDarkColor,
               border: const Border(
                 top: BorderSide(
                   color: borderColor,
@@ -113,7 +119,8 @@ class CupertinoSettingsSection extends StatelessWidget {
 
     return Padding(
       padding: largeScreen
-          ? EdgeInsets.only(top: header == null ? 35.0 : 22.0, left: 22, right: 22)
+          ? EdgeInsets.only(
+              top: header == null ? 35.0 : 22.0, left: 22, right: 22)
           : EdgeInsets.only(
               top: header == null ? 35.0 : 22.0,
             ),

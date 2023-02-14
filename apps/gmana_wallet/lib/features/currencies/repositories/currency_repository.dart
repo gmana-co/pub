@@ -6,7 +6,8 @@ import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 part 'currency_repository.g.dart';
 
 @Riverpod(keepAlive: true)
-CurrencyRepository currencyRepository(CurrencyRepositoryRef ref) => CurrencyRepository(ref.watch(supabaseProvider));
+CurrencyRepository currencyRepository(CurrencyRepositoryRef ref) =>
+    CurrencyRepository(ref.watch(supabaseProvider));
 
 class CurrencyRepository {
   CurrencyRepository(this._client);
@@ -16,7 +17,10 @@ class CurrencyRepository {
 
   Future<List<CurrencyModel>> list() async {
     try {
-      final response = await _client.from(table).select<PostgrestList>().match({'active': true}).order('alpha_3_code', ascending: true);
+      final response = await _client
+          .from(table)
+          .select<PostgrestList>()
+          .match({'active': true}).order('alpha_3_code', ascending: true);
       return response.map((e) => CurrencyModel.fromJson(e)).toList();
     } catch (e) {
       return List.empty();
@@ -25,7 +29,8 @@ class CurrencyRepository {
 
   Future<CurrencyModel?> get(Map<dynamic, dynamic> query) async {
     try {
-      final response = await _client.from(table).select<CurrencyModel>().match(query);
+      final response =
+          await _client.from(table).select<CurrencyModel>().match(query);
       return response;
     } catch (e) {
       return null;

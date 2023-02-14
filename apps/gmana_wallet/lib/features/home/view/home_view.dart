@@ -61,8 +61,10 @@ class _HomeViewState extends State<HomeView> {
         selectedIndex: _currentIndex,
         onDestinationSelected: _onTap,
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.dashboard), label: 'Dashboard'),
-          NavigationDestination(icon: Icon(Icons.savings_outlined), label: 'Saving'),
+          NavigationDestination(
+              icon: Icon(Icons.dashboard), label: 'Dashboard'),
+          NavigationDestination(
+              icon: Icon(Icons.savings_outlined), label: 'Saving'),
           NavigationDestination(icon: Icon(Icons.list), label: 'Transactions'),
           NavigationDestination(icon: Icon(Icons.pie_chart), label: 'Budgets'),
           NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),

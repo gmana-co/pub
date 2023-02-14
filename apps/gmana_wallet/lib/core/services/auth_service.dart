@@ -24,7 +24,8 @@ class AuthService {
   }
 
   Future<void> verifyOtp({required String email, required String token}) async {
-    await client.auth.verifyOTP(email: email, token: token, type: OtpType.magiclink);
+    await client.auth
+        .verifyOTP(email: email, token: token, type: OtpType.magiclink);
   }
 
   StreamSubscription<AuthState> listenToAuthState() {

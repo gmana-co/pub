@@ -14,5 +14,6 @@ class AccountModel with _$AccountModel {
     required String creator,
     DateTime? created,
   }) = _CategoryModel;
-  factory AccountModel.fromJson(Map<String, Object?> json) => _$AccountModelFromJson(json);
+  factory AccountModel.fromJson(Map<String, Object?> json) =>
+      _$AccountModelFromJson(json);
 }

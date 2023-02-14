@@ -10,9 +10,11 @@ class GNavigationRail extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return NavigationRail(
       selectedIndex: ref.watch(activeViewController),
-      onDestinationSelected: (value) => ref.read(activeViewController.notifier).state = value,
+      onDestinationSelected: (value) =>
+          ref.read(activeViewController.notifier).state = value,
       destinations: ref.watch(destinationsController).map((e) {
-        return NavigationRailDestination(icon: Icon(e.icon, color: e.color), label: Text(e.title));
+        return NavigationRailDestination(
+            icon: Icon(e.icon, color: e.color), label: Text(e.title));
       }).toList(),
       // destinations: const [
       //   NavigationRailDestination(icon: Icon(Icons.home), label: Text('Home')),

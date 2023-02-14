@@ -25,7 +25,7 @@ class SettingsSection extends AbstractSection {
     this.tiles,
     this.titleTextStyle,
     this.platform,
-  })  : assert(maxLines == null || maxLines > 0);
+  }) : assert(maxLines == null || maxLines > 0);
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +97,8 @@ class SettingsSection extends AbstractSection {
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemCount: tiles!.length,
-        separatorBuilder: (BuildContext context, int index) => const Divider(height: 1),
+        separatorBuilder: (BuildContext context, int index) =>
+            const Divider(height: 1),
         itemBuilder: (BuildContext context, int index) {
           return tiles![index];
         },

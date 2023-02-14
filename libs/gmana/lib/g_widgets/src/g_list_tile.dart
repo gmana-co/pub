@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class GListTile extends StatelessWidget {
-  const GListTile({super.key, required this.icon, required this.title, this.label = '', this.onTap});
+  const GListTile(
+      {super.key,
+      required this.icon,
+      required this.title,
+      this.label = '',
+      this.onTap});
   final IconData icon;
   final void Function()? onTap;
   final String title;

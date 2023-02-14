@@ -17,7 +17,9 @@ class GNavigationBar extends HookConsumerWidget {
       },
       selectedIndex: activeView,
       destinations: ref.watch(destinationsController).map((destination) {
-        return NavigationDestination(icon: Icon(destination.icon, color: destination.color), label: destination.title);
+        return NavigationDestination(
+            icon: Icon(destination.icon, color: destination.color),
+            label: destination.title);
       }).toList(),
       // destinations: const [
       //   NavigationDestination(icon: Icon(Icons.home), label: "Home"),

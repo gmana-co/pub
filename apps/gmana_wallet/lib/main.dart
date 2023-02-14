@@ -20,7 +20,10 @@ Future<void> main() async {
 
   // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(statusBarColor: Colors.grey.shade800));
 
-  await Supabase.initialize(url: GConfig.supabaseUrl, anonKey: GConfig.supabaseAnonKey);
+  await Supabase.initialize(
+    url: GConfig.supabaseUrl,
+    anonKey: GConfig.supabaseAnonKey,
+  );
   await Hive.initFlutter();
   await Hive.openBox(GConfig.settingsStorageKey);
 

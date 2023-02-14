@@ -24,8 +24,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'go_router_refresh_stream.dart';
 
-final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'shell');
+final GlobalKey<NavigatorState> _rootNavigatorKey =
+    GlobalKey<NavigatorState>(debugLabel: 'root');
+final GlobalKey<NavigatorState> _shellNavigatorKey =
+    GlobalKey<NavigatorState>(debugLabel: 'shell');
 
 final routerProvider = Provider<GoRouter>(
   (ref) {
@@ -34,14 +36,20 @@ final routerProvider = Provider<GoRouter>(
       debugLogDiagnostics: false,
       navigatorKey: _rootNavigatorKey,
       initialLocation: SplashView.location,
-      refreshListenable: GoRouterRefreshStream(auth.client.auth.onAuthStateChange),
+      refreshListenable:
+          GoRouterRefreshStream(auth.client.auth.onAuthStateChange),
       redirect: (context, state) {
         final isLoggedIn = auth.isLoggedIn();
         final signIn = state.subloc == SignInView.location;
         // final signUp = state.subloc == SignUpView.location;
         // final forgotPassword = state.subloc == ForgotPasswordView.location;
         final currentLoc = state.subloc.split('/')[1];
-        List<String> publish = [SignInView.name, SignUpView.name, VerifyView.name, ForgotPasswordView.name];
+        List<String> publish = [
+          SignInView.name,
+          SignUpView.name,
+          VerifyView.name,
+          ForgotPasswordView.name
+        ];
         final res = publish.contains(currentLoc);
 
         if (isLoggedIn && signIn) {
@@ -112,13 +120,17 @@ final routerProvider = Provider<GoRouter>(
                   path: NetworkView.path,
                   builder: (context, state) => const NetworkView(),
                 ),
-                GoRoute(name: AccountView.name, path: AccountView.path, builder: (context, state) => const AccountView(), routes: [
-                  GoRoute(
-                    name: CurrenciesView.name,
-                    path: CurrenciesView.path,
-                    builder: (context, state) => const CurrenciesView(),
-                  ),
-                ]),
+                GoRoute(
+                    name: AccountView.name,
+                    path: AccountView.path,
+                    builder: (context, state) => const AccountView(),
+                    routes: [
+                      GoRoute(
+                        name: CurrenciesView.name,
+                        path: CurrenciesView.path,
+                        builder: (context, state) => const CurrenciesView(),
+                      ),
+                    ]),
               ],
             )
           ],
@@ -141,7 +153,8 @@ final routerProvider = Provider<GoRouter>(
         GoRoute(
           name: VerifyView.name,
           path: VerifyView.path,
-          builder: (context, state) => VerifyView(email: state.params['email']!),
+          builder: (context, state) =>
+              VerifyView(email: state.params['email']!),
         ),
       ],
       errorBuilder: (context, state) => ErrorView(state.error!),

@@ -61,6 +61,8 @@ dev_dependencies:
   go_router_builder: ^1.0.16
   injectable_generator: ^2.1.3
   material_color_utilities: ^0.2.0
+  custom_lint: ^0.2.5
+  riverpod_lint: ^1.0.1
 
 flutter:
   uses-material-design: true

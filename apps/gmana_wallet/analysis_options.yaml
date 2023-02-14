@@ -1,15 +1,7 @@
-include: package:flutter_lints/flutter.yaml
-
 analyzer:
-  errors:
-    invalid_annotation_target: ignore
-    # recursive_interface_inheritance: ignore
-    # override_on_non_overriding_member: ignore
-    non_constant_identifier_names: ignore
+  plugins:
+    - custom_lint
 
-linter:
-  rules:
-    avoid_print: false
-    prefer_single_quotes: true
-    use_super_parameters: true
-    lines_longer_than_80_chars: false
+# custom_lint:
+#   rules:
+#     - missing_provider_scope: false

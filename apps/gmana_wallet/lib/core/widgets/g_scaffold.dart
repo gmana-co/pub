@@ -19,8 +19,10 @@ class GScaffold extends StatelessWidget {
         selectedIndex: _calculateSelectedIndex(context),
         onDestinationSelected: (int idx) => _onItemTapped(idx, context),
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.dashboard), label: 'Dashboard'),
-          NavigationDestination(icon: Icon(Icons.savings_outlined), label: 'Saving'),
+          NavigationDestination(
+              icon: Icon(Icons.dashboard), label: 'Dashboard'),
+          NavigationDestination(
+              icon: Icon(Icons.savings_outlined), label: 'Saving'),
           NavigationDestination(icon: Icon(Icons.list), label: 'Transactions'),
           NavigationDestination(icon: Icon(Icons.pie_chart), label: 'Budgets'),
           NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),

@@ -14,25 +14,35 @@ class IconList {
           size: size0,
         );
       case 'asset':
-        return Icon(FontAwesomeIcons.fileInvoiceDollar, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.fileInvoiceDollar,
+            color: const Color(0xFFFFFFFF), size: size0);
       case 'cash':
-        return Icon(FontAwesomeIcons.moneyBill1, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.moneyBill1,
+            color: const Color(0xFFFFFFFF), size: size0);
       case 'checking':
-        return Icon(FontAwesomeIcons.solidCreditCard, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.solidCreditCard,
+            color: const Color(0xFFFFFFFF), size: size0);
       case 'credit card':
-        return Icon(FontAwesomeIcons.ccVisa, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.ccVisa,
+            color: const Color(0xFFFFFFFF), size: size0);
       case 'debit card':
-        return Icon(FontAwesomeIcons.solidCreditCard, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.solidCreditCard,
+            color: const Color(0xFFFFFFFF), size: size0);
       case 'investment':
-        return Icon(FontAwesomeIcons.chartArea, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.chartArea,
+            color: const Color(0xFFFFFFFF), size: size0);
       case 'loan':
-        return Icon(FontAwesomeIcons.handHoldingDollar, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.handHoldingDollar,
+            color: const Color(0xFFFFFFFF), size: size0);
       case 'savings':
-        return Icon(FontAwesomeIcons.piggyBank, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.piggyBank,
+            color: const Color(0xFFFFFFFF), size: size0);
       case 'other':
-        return Icon(FontAwesomeIcons.wallet, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.wallet,
+            color: const Color(0xFFFFFFFF), size: size0);
       default:
-        return Icon(FontAwesomeIcons.wallet, color: const Color(0xFFFFFFFF), size: size0);
+        return Icon(FontAwesomeIcons.wallet,
+            color: const Color(0xFFFFFFFF), size: size0);
     }
   }
 

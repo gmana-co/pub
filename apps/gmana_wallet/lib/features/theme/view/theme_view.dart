@@ -26,27 +26,39 @@ class ThemeView extends HookConsumerWidget {
                 ListTile(
                   leading: const Icon(Icons.brightness_6),
                   title: const Text('System Mode'),
-                  trailing: theme.themeMode == ThemeMode.system ? const Icon(Icons.done) : null,
+                  trailing: theme.themeMode == ThemeMode.system
+                      ? const Icon(Icons.done)
+                      : null,
                   onTap: () {
-                    ref.read(themeProvider.notifier).setThemeMode(ThemeMode.system);
+                    ref
+                        .read(themeProvider.notifier)
+                        .setThemeMode(ThemeMode.system);
                   },
                 ),
                 const Divider(height: 1),
                 ListTile(
                   leading: const Icon(Icons.dark_mode),
                   title: const Text('Dark Mode'),
-                  trailing: theme.themeMode == ThemeMode.dark ? const Icon(Icons.done) : null,
+                  trailing: theme.themeMode == ThemeMode.dark
+                      ? const Icon(Icons.done)
+                      : null,
                   onTap: () {
-                    ref.read(themeProvider.notifier).setThemeMode(ThemeMode.dark);
+                    ref
+                        .read(themeProvider.notifier)
+                        .setThemeMode(ThemeMode.dark);
                   },
                 ),
                 const Divider(height: 1),
                 ListTile(
                   leading: const Icon(Icons.light_mode),
                   title: const Text('Light Mode'),
-                  trailing: theme.themeMode == ThemeMode.light ? const Icon(Icons.done) : null,
+                  trailing: theme.themeMode == ThemeMode.light
+                      ? const Icon(Icons.done)
+                      : null,
                   onTap: () {
-                    ref.read(themeProvider.notifier).setThemeMode(ThemeMode.light);
+                    ref
+                        .read(themeProvider.notifier)
+                        .setThemeMode(ThemeMode.light);
                   },
                 ),
               ],

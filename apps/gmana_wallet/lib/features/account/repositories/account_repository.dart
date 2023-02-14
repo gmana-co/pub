@@ -6,7 +6,8 @@ import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 part 'account_repository.g.dart';
 
 @Riverpod(keepAlive: true)
-AccountRepository accountRepository(AccountRepositoryRef ref) => AccountRepository(ref.watch(supabaseProvider));
+AccountRepository accountRepository(AccountRepositoryRef ref) =>
+    AccountRepository(ref.watch(supabaseProvider));
 
 class AccountRepository {
   AccountRepository(this._client);

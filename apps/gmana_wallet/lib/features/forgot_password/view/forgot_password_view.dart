@@ -46,7 +46,10 @@ class ForgotPasswordView extends HookConsumerWidget {
             sizedBoxHeight,
             ElevatedButton(
               onPressed: isLoading.value ? null : resetPasswordForEmail,
-              child: isLoading.value ? const GSpinnerDot(color: Colors.white, size: 24) : Text('Submit', style: Theme.of(context).textTheme.labelLarge),
+              child: isLoading.value
+                  ? const GSpinnerDot(color: Colors.white, size: 24)
+                  : Text('Submit',
+                      style: Theme.of(context).textTheme.labelLarge),
             ),
           ],
         ),

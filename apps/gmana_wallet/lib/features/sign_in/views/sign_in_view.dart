@@ -80,7 +80,9 @@ class _SignInViewState extends State<SignInView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sign In', style: Theme.of(context).textTheme.headlineSmall)),
+      appBar: AppBar(
+          title: Text('Sign In',
+              style: Theme.of(context).textTheme.headlineSmall)),
       body: Form(
         key: _formKey,
         child: ListView(
@@ -99,9 +101,14 @@ class _SignInViewState extends State<SignInView> {
               textInputAction: TextInputAction.done,
               validator: MultiValidator([
                 RequiredValidator(errorText: 'Password is required'),
-                MinLengthValidator(8, errorText: 'Password must be at least 8 digits long'),
-                PatternValidator(r'(?=.*[A-Z])', errorText: 'Passwords must have at least one uppercase character'),
-                PatternValidator(r'(?=.*?[#?!@$%^&*-])', errorText: 'Passwords must have at least one special character')
+                MinLengthValidator(8,
+                    errorText: 'Password must be at least 8 digits long'),
+                PatternValidator(r'(?=.*[A-Z])',
+                    errorText:
+                        'Passwords must have at least one uppercase character'),
+                PatternValidator(r'(?=.*?[#?!@$%^&*-])',
+                    errorText:
+                        'Passwords must have at least one special character')
               ]),
               obscureText: _obscureText,
               onIconPressed: () {
@@ -113,13 +120,20 @@ class _SignInViewState extends State<SignInView> {
             sizedBoxHeight,
             ElevatedButton(
               onPressed: _isLoading ? null : _signIn,
-              child: _isLoading ? const GSpinnerDot(color: Colors.white, size: 24) : Text('Sign In', style: Theme.of(context).textTheme.labelLarge),
+              child: _isLoading
+                  ? const GSpinnerDot(color: Colors.white, size: 24)
+                  : Text('Sign In',
+                      style: Theme.of(context).textTheme.labelLarge),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextButton(child: const Text('Forgot Password'), onPressed: () => context.push(ForgotPasswordView.location)),
-                TextButton(child: const Text('Sign Up'), onPressed: () => context.push(SignUpView.location)),
+                TextButton(
+                    child: const Text('Forgot Password'),
+                    onPressed: () => context.push(ForgotPasswordView.location)),
+                TextButton(
+                    child: const Text('Sign Up'),
+                    onPressed: () => context.push(SignUpView.location)),
               ],
             ),
           ],

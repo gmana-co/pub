@@ -3,8 +3,10 @@
 import 'package:gmana_ext/gmana_ext.dart';
 
 void main() {
-  print('Grapheme clusters have varying length in the underlying representation'.toSentenceCase());
-  print('Grapheme clusters have varying length in the underlying representation'.toTitleCase());
+  print('Grapheme clusters have varying length in the underlying representation'
+      .toSentenceCase());
+  print('Grapheme clusters have varying length in the underlying representation'
+      .toTitleCase());
   print('12.9'.toDouble);
   print('1'.toInt);
 

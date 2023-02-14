@@ -26,14 +26,18 @@ class LanguageView extends HookConsumerWidget {
               children: [
                 ListTile(
                   title: const Text('ភាសាខ្មែរ'),
-                  trailing: language.language == 'km' ? const Icon(Icons.done) : null,
-                  onTap: () => ref.read(languageProvider.notifier).setLanguage('km'),
+                  trailing:
+                      language.language == 'km' ? const Icon(Icons.done) : null,
+                  onTap: () =>
+                      ref.read(languageProvider.notifier).setLanguage('km'),
                 ),
                 const Divider(height: 1),
                 ListTile(
                   title: const Text('English'),
-                  trailing: language.language == 'en' ? const Icon(Icons.done) : null,
-                  onTap: () => ref.read(languageProvider.notifier).setLanguage('en'),
+                  trailing:
+                      language.language == 'en' ? const Icon(Icons.done) : null,
+                  onTap: () =>
+                      ref.read(languageProvider.notifier).setLanguage('en'),
                 ),
               ],
             ),

@@ -32,7 +32,10 @@ class _VerifyViewState extends State<VerifyView> {
       FocusScope.of(context).unfocus();
 
       try {
-        await supabase.auth.verifyOTP(email: widget.email, token: pinCodeController.text.trim(), type: OtpType.signup);
+        await supabase.auth.verifyOTP(
+            email: widget.email,
+            token: pinCodeController.text.trim(),
+            type: OtpType.signup);
 
         if (mounted) {
           context.go(DashboardView.location);
@@ -61,7 +64,9 @@ class _VerifyViewState extends State<VerifyView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sign Up', style: Theme.of(context).textTheme.headlineSmall)),
+      appBar: AppBar(
+          title: Text('Sign Up',
+              style: Theme.of(context).textTheme.headlineSmall)),
       body: Form(
         key: _formKey,
         child: ListView(
@@ -71,7 +76,8 @@ class _VerifyViewState extends State<VerifyView> {
             sizedBoxHeight,
             ElevatedButton(
               onPressed: isLoading ? null : _verify,
-              child: Text(isLoading ? 'Loading' : 'Sign Up', style: Theme.of(context).textTheme.labelLarge),
+              child: Text(isLoading ? 'Loading' : 'Sign Up',
+                  style: Theme.of(context).textTheme.labelLarge),
             ),
           ],
         ),

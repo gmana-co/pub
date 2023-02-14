@@ -6,7 +6,8 @@ import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 part 'category_repository.g.dart';
 
 @Riverpod(keepAlive: true)
-CategoryRepository categoryRepository(CategoryRepositoryRef ref) => CategoryRepository(ref.watch(supabaseProvider));
+CategoryRepository categoryRepository(CategoryRepositoryRef ref) =>
+    CategoryRepository(ref.watch(supabaseProvider));
 
 class CategoryRepository {
   CategoryRepository(this._client);

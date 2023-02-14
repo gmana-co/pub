@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 import 'g_color.dart';
 
 class RadiantGradientMask extends StatelessWidget {
-  const RadiantGradientMask({super.key, required this.child, required this.color, this.endColor, this.align, this.radius, this.tileMode});
+  const RadiantGradientMask(
+      {super.key,
+      required this.child,
+      required this.color,
+      this.endColor,
+      this.align,
+      this.radius,
+      this.tileMode});
   final Widget child;
   final Color color;
   final Color? endColor;

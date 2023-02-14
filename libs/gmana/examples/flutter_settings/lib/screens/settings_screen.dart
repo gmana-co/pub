@@ -67,9 +67,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
         SettingsSection(
           title: 'Account',
           tiles: [
-            SettingsTile(title: 'Phone number', leading: const Icon(Icons.phone)),
+            SettingsTile(
+                title: 'Phone number', leading: const Icon(Icons.phone)),
             SettingsTile(title: 'Email', leading: const Icon(Icons.email)),
-            SettingsTile(title: 'Sign out', leading: const Icon(Icons.exit_to_app)),
+            SettingsTile(
+                title: 'Sign out', leading: const Icon(Icons.exit_to_app)),
           ],
         ),
         SettingsSection(
@@ -112,8 +114,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
         SettingsSection(
           title: 'Misc',
           tiles: [
-            SettingsTile(title: 'Terms of Service', leading: const Icon(Icons.description)),
-            SettingsTile(title: 'Open source licenses', leading: const Icon(Icons.collections_bookmark)),
+            SettingsTile(
+                title: 'Terms of Service',
+                leading: const Icon(Icons.description)),
+            SettingsTile(
+                title: 'Open source licenses',
+                leading: const Icon(Icons.collections_bookmark)),
           ],
         ),
         CustomSection(

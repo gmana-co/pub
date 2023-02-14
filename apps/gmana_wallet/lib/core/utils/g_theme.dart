@@ -31,7 +31,9 @@ class GTheme {
   static ThemeData get dark {
     return ThemeData.dark().copyWith(
         useMaterial3: true,
-        floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: Colors.grey.shade800, foregroundColor: Colors.grey.shade100),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+            backgroundColor: Colors.grey.shade800,
+            foregroundColor: Colors.grey.shade100),
         inputDecorationTheme: const InputDecorationTheme(
           border: OutlineInputBorder(),
           isDense: true,

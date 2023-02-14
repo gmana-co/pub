@@ -10,8 +10,12 @@ command:
 
 scripts:
   analyze:
-    exec: flutter analyze .
+    exec: dart analyze .
+  format:
+    exec: dart format . --set-exit-if-changed
   outdated:
     exec: flutter pub outdated
   test:
     exec: flutter test
+  lint:
+    exec: dart run custom_lint

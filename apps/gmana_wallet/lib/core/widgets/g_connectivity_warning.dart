@@ -23,7 +23,11 @@ class GConnectivityWarning extends ConsumerWidget {
               children: [
                 Icon(Icons.wifi_off, color: Colors.grey.shade100),
                 const SizedBox(width: 8),
-                Text('No internet connection', style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.grey.shade100)),
+                Text('No internet connection',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium!
+                        .copyWith(color: Colors.grey.shade100)),
               ],
             ),
           )

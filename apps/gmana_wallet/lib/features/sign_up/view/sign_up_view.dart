@@ -36,7 +36,9 @@ class _SignUpViewState extends State<SignUpView> {
       FocusScope.of(context).unfocus();
 
       try {
-        await supabase.auth.signUp(email: _emailController.text.trim(), password: _passwordController.text.trim());
+        await supabase.auth.signUp(
+            email: _emailController.text.trim(),
+            password: _passwordController.text.trim());
         if (mounted) {
           context.go('${VerifyView.location}/${_emailController.text.trim()}');
         }
@@ -68,7 +70,9 @@ class _SignUpViewState extends State<SignUpView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sign Up', style: Theme.of(context).textTheme.headlineSmall)),
+      appBar: AppBar(
+          title: Text('Sign Up',
+              style: Theme.of(context).textTheme.headlineSmall)),
       body: Form(
         key: _formKey,
         child: ListView(
@@ -93,9 +97,14 @@ class _SignUpViewState extends State<SignUpView> {
               },
               validator: MultiValidator([
                 RequiredValidator(errorText: 'Password is required'),
-                MinLengthValidator(8, errorText: 'Password must be at least 8 digits long'),
-                PatternValidator(r'(?=.*[A-Z])', errorText: 'Passwords must have at least one uppercase character'),
-                PatternValidator(r'(?=.*?[#?!@$%^&*-])', errorText: 'Passwords must have at least one special character')
+                MinLengthValidator(8,
+                    errorText: 'Password must be at least 8 digits long'),
+                PatternValidator(r'(?=.*[A-Z])',
+                    errorText:
+                        'Passwords must have at least one uppercase character'),
+                PatternValidator(r'(?=.*?[#?!@$%^&*-])',
+                    errorText:
+                        'Passwords must have at least one special character')
               ]),
               obscureText: _obscurePassword,
               onIconPressed: () {
@@ -110,10 +119,16 @@ class _SignUpViewState extends State<SignUpView> {
               textInputAction: TextInputAction.done,
               validator: MultiValidator([
                 RequiredValidator(errorText: 'password is required'),
-                MinLengthValidator(8, errorText: 'password must be at least 8 digits long'),
-                PatternValidator(r'(?=.*[A-Z])', errorText: 'Passwords must have at least one uppercase character'),
-                PatternValidator(r'(?=.*?[#?!@$%^&*-])', errorText: 'passwords must have at least one special character'),
-                MatchValidator(_password, errorText: 'Password must be the same'),
+                MinLengthValidator(8,
+                    errorText: 'password must be at least 8 digits long'),
+                PatternValidator(r'(?=.*[A-Z])',
+                    errorText:
+                        'Passwords must have at least one uppercase character'),
+                PatternValidator(r'(?=.*?[#?!@$%^&*-])',
+                    errorText:
+                        'passwords must have at least one special character'),
+                MatchValidator(_password,
+                    errorText: 'Password must be the same'),
               ]),
               obscureText: _obscureConfirmPassword,
               onIconPressed: () {
@@ -125,7 +140,8 @@ class _SignUpViewState extends State<SignUpView> {
             sizedBoxHeight,
             ElevatedButton(
               onPressed: _isLoading ? null : _signUp,
-              child: Text(_isLoading ? 'Loading' : 'Sign Up', style: Theme.of(context).textTheme.labelLarge),
+              child: Text(_isLoading ? 'Loading' : 'Sign Up',
+                  style: Theme.of(context).textTheme.labelLarge),
             ),
           ],
         ),

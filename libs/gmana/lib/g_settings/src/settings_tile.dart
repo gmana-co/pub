@@ -240,15 +240,16 @@ class SettingsTile extends AbstractTile {
     }
   }
 
-  Function? onTapFunction(BuildContext context) => onTap != null || onPressed != null
-      ? () {
-          if (onPressed != null) {
-            onPressed!.call(context);
-          } else {
-            onTap!.call();
-          }
-        }
-      : null;
+  Function? onTapFunction(BuildContext context) =>
+      onTap != null || onPressed != null
+          ? () {
+              if (onPressed != null) {
+                onPressed!.call(context);
+              } else {
+                onTap!.call();
+              }
+            }
+          : null;
 }
 
 class CustomTile extends AbstractTile {

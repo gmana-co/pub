@@ -24,7 +24,8 @@ abstract class TextFieldValidator extends FieldValidator<String?> {
     return (ignoreEmptyValues && value!.isEmpty) ? null : super.call(value);
   }
 
-  bool hasMatch(String pattern, String input, {bool caseSensitive = true}) => RegExp(pattern, caseSensitive: caseSensitive).hasMatch(input);
+  bool hasMatch(String pattern, String input, {bool caseSensitive = true}) =>
+      RegExp(pattern, caseSensitive: caseSensitive).hasMatch(input);
 }
 
 class RequiredValidator extends TextFieldValidator {
@@ -76,7 +77,9 @@ class LengthRangeValidator extends TextFieldValidator {
   @override
   bool get ignoreEmptyValues => false;
 
-  LengthRangeValidator({required this.min, required this.max, required String errorText}) : super(errorText);
+  LengthRangeValidator(
+      {required this.min, required this.max, required String errorText})
+      : super(errorText);
 
   @override
   bool isValid(String? value) {
@@ -88,7 +91,9 @@ class RangeValidator extends TextFieldValidator {
   final num min;
   final num max;
 
-  RangeValidator({required this.min, required this.max, required String errorText}) : super(errorText);
+  RangeValidator(
+      {required this.min, required this.max, required String errorText})
+      : super(errorText);
 
   @override
   bool isValid(String? value) {
@@ -108,17 +113,21 @@ class EmailValidator extends TextFieldValidator {
   EmailValidator({required String errorText}) : super(errorText);
 
   @override
-  bool isValid(String? value) => hasMatch(_emailPattern.toString(), value!, caseSensitive: false);
+  bool isValid(String? value) =>
+      hasMatch(_emailPattern.toString(), value!, caseSensitive: false);
 }
 
 class PatternValidator extends TextFieldValidator {
   final Pattern pattern;
   final bool caseSensitive;
 
-  PatternValidator(this.pattern, {required String errorText, this.caseSensitive = true}) : super(errorText);
+  PatternValidator(this.pattern,
+      {required String errorText, this.caseSensitive = true})
+      : super(errorText);
 
   @override
-  bool isValid(String? value) => hasMatch(pattern.toString(), value!, caseSensitive: caseSensitive);
+  bool isValid(String? value) =>
+      hasMatch(pattern.toString(), value!, caseSensitive: caseSensitive);
 }
 
 class DateValidator extends TextFieldValidator {
@@ -193,6 +202,8 @@ final emailValidators = MultiValidator([
 final passwordValidators = MultiValidator([
   RequiredValidator(errorText: 'Password is required'),
   MinLengthValidator(8, errorText: 'Password must be at least 8 digits long'),
-  PatternValidator(r'(?=.*[A-Z])', errorText: 'Passwords must have at least one uppercase character'),
-  PatternValidator(r'(?=.*?[#?!@$%^&*-])', errorText: 'Passwords must have at least one special character')
+  PatternValidator(r'(?=.*[A-Z])',
+      errorText: 'Passwords must have at least one uppercase character'),
+  PatternValidator(r'(?=.*?[#?!@$%^&*-])',
+      errorText: 'Passwords must have at least one special character')
 ]);

@@ -17,7 +17,9 @@ class NetworkView extends HookConsumerWidget {
       appBar: AppBar(
         title: const Text('Network Status'),
       ),
-      body: network == NetworkStatus.off ? const Center(child: Text('No Internet')) : const Center(child: Text('Internet is on')),
+      body: network == NetworkStatus.off
+          ? const Center(child: Text('No Internet'))
+          : const Center(child: Text('Internet is on')),
     );
   }
 }

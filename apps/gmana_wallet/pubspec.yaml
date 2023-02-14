@@ -35,13 +35,9 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   gmana:
-    git:
-      url: https://github.com/sun-sreng/gmana-pub.git
-      path: gmana
+    path: ../../libs/gmana
   gmana_ext:
-    git:
-      url: https://github.com/sun-sreng/gmana-pub.git
-      path: gmana_ext
+    path: ../../libs/gmana_ext
   flutter_svg: ^1.1.6
   logger: ^1.1.0
   flutter_native_splash: ^2.2.16

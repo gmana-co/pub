@@ -528,20 +528,16 @@ packages:
   gmana:
     dependency: "direct main"
     description:
-      path: gmana
-      ref: HEAD
-      resolved-ref: "54424b84a4bad62dc063c893bcece9ca6d612fd0"
-      url: "https://github.com/sun-sreng/gmana-pub.git"
-    source: git
+      path: "../../libs/gmana"
+      relative: true
+    source: path
     version: "0.0.1"
   gmana_ext:
     dependency: "direct main"
     description:
-      path: gmana_ext
-      ref: HEAD
-      resolved-ref: "54424b84a4bad62dc063c893bcece9ca6d612fd0"
-      url: "https://github.com/sun-sreng/gmana-pub.git"
-    source: git
+      path: "../../libs/gmana_ext"
+      relative: true
+    source: path
     version: "0.0.1"
   go_router:
     dependency: "direct main"

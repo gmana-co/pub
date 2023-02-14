@@ -1,0 +1,23 @@
+name: gmana_ext
+description: A starting point for Dart libraries or applications.
+version: 0.0.1
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.16.0 <3.0.0'
+  flutter: '>=1.17.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^4.0.1
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+  # test: ^1.22.1
+
+flutter:
+  # uses-material-design: true

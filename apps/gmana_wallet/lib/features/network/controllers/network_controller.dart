@@ -6,8 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 enum NetworkStatus { notDetermined, on, off }
 
 class NetworkDetectorNotifier extends StateNotifier<NetworkStatus> {
-  StreamController<ConnectivityResult> controller =
-      StreamController<ConnectivityResult>();
+  StreamController<ConnectivityResult> controller = StreamController<ConnectivityResult>();
 
   late NetworkStatus lastResult;
 
@@ -30,6 +29,8 @@ class NetworkDetectorNotifier extends StateNotifier<NetworkStatus> {
           break;
         case ConnectivityResult.vpn:
           break;
+        case ConnectivityResult.other:
+          break;
       }
 
       if (newState != state) {
@@ -39,5 +40,4 @@ class NetworkDetectorNotifier extends StateNotifier<NetworkStatus> {
   }
 }
 
-final networkController =
-    StateNotifierProvider.autoDispose((ref) => NetworkDetectorNotifier());
+final networkController = StateNotifierProvider.autoDispose((ref) => NetworkDetectorNotifier());

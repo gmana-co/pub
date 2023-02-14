@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Production",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "--dart-define=SUPABASE_URL=https://lwfkzthkngsyclkdbdpc.supabase.co",
+        "--dart-define=SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNTc1MzMzOCwiZXhwIjoxOTUxMzI5MzM4fQ.sMqkSsTDYTDz79hxGETUWRxb1y_5-8JMF-EdIQtC-GA"
+      ]
+    }
+  ]
+}

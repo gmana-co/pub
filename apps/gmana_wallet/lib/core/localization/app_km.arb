@@ -1,0 +1,18 @@
+{
+  "appTitle": "GMana Wallet KH",
+  "description": "The title of the application KH",
+  "transactionTitle": "Transactions KH",
+  "counterPage": "Counter page",
+  "buttonPushedTimes": "You have pushed the button this many times:",
+  "increment": "Increment",
+  "somethingWentWrong": "Something went wrong",
+  "unexpected": "Unexpected error occurred",
+  "dashboard": "គ្រប់គ្រង",
+  "savings": "សន្សំ",
+  "transactions": "ប្រតិបត្តិការ",
+  "budgets": "ថវិកា",
+  "languages": "ភាសា",
+  "settings": "កំណត់",
+  "themeMode": "ពណ៌",
+  "categories": "ប្រភេទ"
+}

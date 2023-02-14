@@ -1,0 +1,1 @@
+enum DotType { rounded, circular }

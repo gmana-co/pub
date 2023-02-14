@@ -1,0 +1,17 @@
+name: gmana_flutter
+
+packages:
+  - apps/**
+  - libs/**
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  analyze:
+    exec: flutter analyze .
+  outdated:
+    exec: flutter pub outdated
+  test:
+    exec: flutter test

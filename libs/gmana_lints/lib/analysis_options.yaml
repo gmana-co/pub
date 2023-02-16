@@ -4,8 +4,8 @@ analyzer:
   exclude:
     - '**/*.g.dart'
     - '**/*.freezed.dart'
-  plugins:
-    - custom_lint
+  # plugins:
+  #   - custom_lint
   errors:
     invalid_annotation_target: ignore
     # recursive_interface_inheritance: ignore
@@ -18,10 +18,9 @@ linter:
     prefer_single_quotes: true
     use_super_parameters: true
     lines_longer_than_80_chars: false
-
-custom_lint:
-  rules:
-    # Enable one rule
-    - provider_parameters
-    # Disable another
-    - missing_provider_scope: false
+# custom_lint:
+#   rules:
+#     # Enable one rule
+#     - provider_parameters
+#     # Disable another
+#     - missing_provider_scope: false

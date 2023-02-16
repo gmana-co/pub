@@ -42,6 +42,7 @@ dependencies:
   logger: ^1.1.0
   flutter_native_splash: ^2.2.16
   font_awesome_flutter: ^10.3.0
+  flutter_config: ^2.0.0
 
 dev_dependencies:
   flutter_test:

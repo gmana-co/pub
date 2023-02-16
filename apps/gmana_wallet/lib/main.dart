@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_config/flutter_config.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:gmana_wallet/core/utils/utils.dart';
 import 'package:gmana_wallet/features/app/app.dart';
@@ -19,11 +20,9 @@ Future<void> main() async {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(statusBarColor: Colors.grey.shade800));
-
-  await Supabase.initialize(
-    url: GConfig.supabaseUrl,
-    anonKey: GConfig.supabaseAnonKey,
-  );
+  WidgetsFlutterBinding.ensureInitialized(); // Required by FlutterConfig
+  await FlutterConfig.loadEnvVariables();
+  await Supabase.initialize(url: FlutterConfig.get('SUPABASE_URL'), anonKey: FlutterConfig.get('SUPABASE_ANON_KEY'));
   await Hive.initFlutter();
   await Hive.openBox(GConfig.settingsStorageKey);
 

@@ -121,16 +121,17 @@ final routerProvider = Provider<GoRouter>(
                   builder: (context, state) => const NetworkView(),
                 ),
                 GoRoute(
-                    name: AccountView.name,
-                    path: AccountView.path,
-                    builder: (context, state) => const AccountView(),
-                    routes: [
-                      GoRoute(
-                        name: CurrenciesView.name,
-                        path: CurrenciesView.path,
-                        builder: (context, state) => const CurrenciesView(),
-                      ),
-                    ]),
+                  name: AccountView.name,
+                  path: AccountView.path,
+                  builder: (context, state) => const AccountView(),
+                  routes: [
+                    GoRoute(
+                      name: CurrenciesView.name,
+                      path: CurrenciesView.path,
+                      builder: (context, state) => const CurrenciesView(),
+                    ),
+                  ],
+                ),
               ],
             )
           ],

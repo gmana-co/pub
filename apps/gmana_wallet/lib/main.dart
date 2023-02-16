@@ -13,14 +13,10 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   usePathUrlStrategy();
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-  // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(statusBarColor: Colors.grey.shade800));
-  WidgetsFlutterBinding.ensureInitialized(); // Required by FlutterConfig
   await FlutterConfig.loadEnvVariables();
   await Supabase.initialize(url: FlutterConfig.get('SUPABASE_URL'), anonKey: FlutterConfig.get('SUPABASE_ANON_KEY'));
   await Hive.initFlutter();
@@ -30,8 +26,6 @@ Future<void> main() async {
     FlutterError.dumpErrorToConsole(details);
     if (kReleaseMode) exit(1);
   };
-
-  // FlutterNativeSplash.remove();
 
   runApp(const ProviderScope(child: App()));
 }

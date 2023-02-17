@@ -9,6 +9,7 @@ import 'package:gmana_wallet/core/utils/utils.dart';
 import 'package:gmana_wallet/features/app/app.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 Future<void> main() async {
@@ -26,6 +27,11 @@ Future<void> main() async {
     FlutterError.dumpErrorToConsole(details);
     if (kReleaseMode) exit(1);
   };
-
-  runApp(const ProviderScope(child: App()));
+  await SentryFlutter.init(
+    (options) {
+      options.dsn = FlutterConfig.get('SENTRY_DSN');
+      options.tracesSampleRate = 1.0;
+    },
+    appRunner: () => runApp(const ProviderScope(child: App())),
+  );
 }

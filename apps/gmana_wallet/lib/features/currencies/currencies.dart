@@ -1,4 +1,3 @@
 export 'models/currency_model.dart';
-export 'providers/currency_provider.dart';
-export 'repositories/currency_repository.dart';
+export 'service/currencies_service.dart';
 export 'view/currencies_view.dart';

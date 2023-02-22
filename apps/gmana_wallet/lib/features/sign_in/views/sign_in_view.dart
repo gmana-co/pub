@@ -80,7 +80,9 @@ class _SignInViewState extends State<SignInView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Sign In', style: Theme.of(context).textTheme.headlineSmall)),
+      appBar: AppBar(
+          title: Text('Sign In',
+              style: Theme.of(context).textTheme.headlineSmall)),
       body: Form(
         key: _formKey,
         child: ListView(
@@ -118,13 +120,20 @@ class _SignInViewState extends State<SignInView> {
             sizedBoxHeight,
             ElevatedButton(
               onPressed: _isLoading ? null : _signIn,
-              child: _isLoading ? const GSpinnerDot(color: Colors.white, size: 24) : Text('Sign In', style: Theme.of(context).textTheme.labelLarge),
+              child: _isLoading
+                  ? const GSpinnerDot(color: Colors.white, size: 24)
+                  : Text('Sign In',
+                      style: Theme.of(context).textTheme.labelLarge),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextButton(child: const Text('Forgot Password'), onPressed: () => context.push(ForgotPasswordView.location)),
-                TextButton(child: const Text('Sign Up'), onPressed: () => context.push(SignUpView.location)),
+                TextButton(
+                    child: const Text('Forgot Password'),
+                    onPressed: () => context.push(ForgotPasswordView.location)),
+                TextButton(
+                    child: const Text('Sign Up'),
+                    onPressed: () => context.push(SignUpView.location)),
               ],
             ),
           ],

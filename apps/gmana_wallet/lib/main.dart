@@ -19,7 +19,9 @@ Future<void> main() async {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   await FlutterConfig.loadEnvVariables();
-  await Supabase.initialize(url: FlutterConfig.get('SUPABASE_URL'), anonKey: FlutterConfig.get('SUPABASE_ANON_KEY'));
+  await Supabase.initialize(
+      url: FlutterConfig.get('SUPABASE_URL'),
+      anonKey: FlutterConfig.get('SUPABASE_ANON_KEY'));
   await Hive.initFlutter();
   await Hive.openBox(GConfig.settingsStorageKey);
 

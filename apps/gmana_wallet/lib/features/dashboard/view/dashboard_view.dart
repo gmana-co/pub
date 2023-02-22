@@ -26,7 +26,10 @@ class DashboardView extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          children: [const Text('Dashboard'), TextButton(onPressed: handleClick, child: const Text('Sentry'))],
+          children: [
+            const Text('Dashboard'),
+            TextButton(onPressed: handleClick, child: const Text('Sentry'))
+          ],
         ),
       ),
     );

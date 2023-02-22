@@ -1,13 +1,24 @@
 import 'package:gmana_wallet/core/providers/providers.dart';
-import 'package:gmana_wallet/features/category/models/category_model.dart';
+import 'package:gmana_wallet/features/category/category.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 
-part 'category_repository.g.dart';
+part 'category_service.g.dart';
 
 @Riverpod(keepAlive: true)
-CategoryRepository categoryRepository(CategoryRepositoryRef ref) =>
-    CategoryRepository(ref.watch(supabaseProvider));
+CategoryRepository categoryRepository(CategoryRepositoryRef ref) => CategoryRepository(ref.watch(supabaseProvider));
+
+@Riverpod(keepAlive: true)
+Future<List<CategoryModel>> categoryList(CategoryListRef ref) async {
+  final CategoryRepository categoryRepository = ref.watch(categoryRepositoryProvider);
+  return categoryRepository.list();
+}
+
+@Riverpod(keepAlive: true)
+Future<CategoryModel?> categoryGet(CategoryGetRef ref, {required String id}) async {
+  final CategoryRepository categoryRepository = ref.watch(categoryRepositoryProvider);
+  return categoryRepository.get({'id': id});
+}
 
 class CategoryRepository {
   CategoryRepository(this._client);

@@ -1,13 +1,22 @@
 import 'package:gmana_wallet/core/providers/providers.dart';
-import 'package:gmana_wallet/features/account/models/account_model.dart';
+import 'package:gmana_wallet/features/account/account.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 
-part 'account_repository.g.dart';
+part 'account_service.g.dart';
 
 @Riverpod(keepAlive: true)
-AccountRepository accountRepository(AccountRepositoryRef ref) =>
-    AccountRepository(ref.watch(supabaseProvider));
+AccountRepository accountRepository(AccountRepositoryRef ref) => AccountRepository(ref.watch(supabaseProvider));
+
+@Riverpod(keepAlive: true)
+Future<List<AccountModel>> accountList(AccountListRef ref) async {
+  return ref.watch(accountRepositoryProvider).list();
+}
+
+@Riverpod(keepAlive: true)
+Future<AccountModel?> accountGet(AccountGetRef ref, {required String id}) async {
+  return ref.watch(accountRepositoryProvider).get({'id': id});
+}
 
 class AccountRepository {
   AccountRepository(this._client);

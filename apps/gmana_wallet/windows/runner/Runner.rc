@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "co.gmana" "\0"
-            VALUE "FileDescription", "gmana_wallet" "\0"
+            VALUE "FileDescription", "GMana Wallet" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "gmana_wallet" "\0"
+            VALUE "InternalName", "GMana Wallet" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 co.gmana. All rights reserved." "\0"
             VALUE "OriginalFilename", "gmana_wallet.exe" "\0"
-            VALUE "ProductName", "gmana_wallet" "\0"
+            VALUE "ProductName", "GMana Wallet" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

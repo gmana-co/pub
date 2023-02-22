@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="co.gmana.gmana_wallet">
    <application
-        android:label="gmana_wallet"
+        android:label="GMana Wallet"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

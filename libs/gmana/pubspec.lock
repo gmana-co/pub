@@ -5,10 +5,10 @@ packages:
     dependency: "direct main"
     description:
       name: android_intent_plus
-      sha256: ebd110b60723334bdc6eeb373116d6c52e9bed8feb9dcbd9f034531f56636e31
+      sha256: "54810cb33945c2c10742cd746ea994822c115e9dbe189919bc63cb436e45a6af"
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.5"
+    version: "3.1.6"
   async:
     dependency: transitive
     description:
@@ -84,10 +84,10 @@ packages:
     dependency: "direct main"
     description:
       name: formz
-      sha256: "3ed7c60974fa8184ab87baef2379f29ef516613318d9f65322072eb7bcb7ad30"
+      sha256: ed92f501f4a44b1da9137a025007df773b3732147b413c464158ecd997612ab6
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0-dev.1"
+    version: "0.4.1"
   intl:
     dependency: "direct main"
     description:
@@ -217,10 +217,10 @@ packages:
     dependency: "direct main"
     description:
       name: url_launcher
-      sha256: "698fa0b4392effdc73e9e184403b627362eb5fbf904483ac9defbb1c2191d809"
+      sha256: e8f2efc804810c0f2f5b485f49e7942179f56eabcfe81dce3387fec4bb55876b
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.8"
+    version: "6.1.9"
   url_launcher_android:
     dependency: transitive
     description:

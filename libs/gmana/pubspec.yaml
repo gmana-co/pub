@@ -10,10 +10,10 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.17.0
-  formz: ^0.5.0-dev.1
-  android_intent_plus: ^3.1.5
+  formz: ^0.4.1
+  android_intent_plus: ^3.1.6
   platform: ^3.1.0
-  url_launcher: ^6.1.7
+  url_launcher: ^6.1.9
 
 dev_dependencies:
   flutter_test:

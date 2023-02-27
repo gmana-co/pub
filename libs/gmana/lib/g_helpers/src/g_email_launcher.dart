@@ -17,9 +17,7 @@ typedef LaunchUrlProvider = Future<bool> Function(Uri url);
 typedef CanLaunchUrlProvider = Future<bool> Function(Uri url);
 
 class GEmailLauncher {
-  GEmailLauncher(
-      {LaunchUrlProvider? launchUrlProvider,
-      CanLaunchUrlProvider? canLaunchProvider})
+  GEmailLauncher({LaunchUrlProvider? launchUrlProvider, CanLaunchUrlProvider? canLaunchProvider})
       : _launchUrlProvider = launchUrlProvider ?? launchUrl,
         _canLaunchUrlProvider = canLaunchProvider ?? canLaunchUrl;
 

@@ -19,8 +19,7 @@ linter:
     use_super_parameters: true
     lines_longer_than_80_chars: false
 # custom_lint:
+#   enable_all_lint_rules: true
 #   rules:
-#     # Enable one rule
-#     - provider_parameters
-#     # Disable another
-#     - missing_provider_scope: false
+#     # You can now enable one specific rule in the "rules" list
+#     - missing_provider_scope

@@ -20,8 +20,9 @@ Future<void> main() async {
 
   await FlutterConfig.loadEnvVariables();
   await Supabase.initialize(
-      url: FlutterConfig.get('SUPABASE_URL'),
-      anonKey: FlutterConfig.get('SUPABASE_ANON_KEY'));
+    url: FlutterConfig.get('SUPABASE_URL'),
+    anonKey: FlutterConfig.get('SUPABASE_ANON_KEY'),
+  );
   await Hive.initFlutter();
   await Hive.openBox(GConfig.settingsStorageKey);
 

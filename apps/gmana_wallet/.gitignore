@@ -52,4 +52,4 @@ lib/**/*.gr.dart
 lib/**/*.freezed.dart
 lib/**/*.config.dart
 
-.env
+*.env

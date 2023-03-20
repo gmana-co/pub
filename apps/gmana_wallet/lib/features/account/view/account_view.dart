@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gmana_wallet/features/account/account.dart';
-import 'package:gmana_wallet/features/currencies/currencies.dart';
 import 'package:gmana_wallet/features/settings/settings.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -22,7 +21,7 @@ class AccountView extends HookConsumerWidget {
         actions: [
           IconButton(
             onPressed: () {
-              context.go(CurrenciesView.location);
+              context.go(AccountCreateView.location);
             },
             icon: const Icon(Icons.add),
           )

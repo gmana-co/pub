@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sentry_flutter/sentry_flutter.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -10,11 +9,8 @@ class DashboardView extends StatelessWidget {
   Future<void> handleClick() async {
     try {
       throw Error();
-    } catch (exception, stackTrace) {
-      await Sentry.captureException(
-        exception,
-        stackTrace: stackTrace,
-      );
+    } catch (exception) {
+      print('object');
     }
   }
 
@@ -26,10 +22,7 @@ class DashboardView extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          children: [
-            const Text('Dashboard'),
-            TextButton(onPressed: handleClick, child: const Text('Sentry'))
-          ],
+          children: [const Text('Dashboard'), TextButton(onPressed: handleClick, child: const Text('Sentry'))],
         ),
       ),
     );

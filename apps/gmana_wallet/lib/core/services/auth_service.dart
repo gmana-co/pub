@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
 
-final authController = Provider((ref) => AuthService(Supabase.instance.client));
+final Provider<AuthService> authController = Provider((ref) => AuthService(Supabase.instance.client));
 
 class AuthService {
   final SupabaseClient client;
@@ -24,8 +24,7 @@ class AuthService {
   }
 
   Future<void> verifyOtp({required String email, required String token}) async {
-    await client.auth
-        .verifyOTP(email: email, token: token, type: OtpType.magiclink);
+    await client.auth.verifyOTP(email: email, token: token, type: OtpType.magiclink);
   }
 
   StreamSubscription<AuthState> listenToAuthState() {

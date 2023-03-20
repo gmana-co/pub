@@ -120,7 +120,7 @@ final routerProvider = Provider<GoRouter>(
                     GoRoute(
                       name: AccountCreateView.name,
                       path: AccountCreateView.path,
-                      builder: (context, state) => AccountCreateView(),
+                      builder: (context, state) => const AccountCreateView(),
                     ),
                     GoRoute(
                       name: CurrenciesView.name,

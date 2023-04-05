@@ -1,8 +1,8 @@
 name: gmana_ext
 description: A utility helper to faster develop for internal.
 version: 0.0.1
-repository: https://github.com/sun-sreng/gmana_flutter/tree/main/libs/gmana_ext
-issue_tracker: https://github.com/sun-sreng/gmana_flutter/issues
+repository: https://github.com/sun-sreng/pub/tree/main/libs/gmana_ext
+issue_tracker: https://github.com/sun-sreng/pub/issues
 
 environment:
   sdk: '>=2.16.0 <3.0.0'

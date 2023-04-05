@@ -1,4 +1,4 @@
-name: gmana_flutter
+name: pub
 
 packages:
   - apps/**

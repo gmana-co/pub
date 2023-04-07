@@ -1,7 +1,7 @@
-## 0.0.1
+## 0.0.2 2023-04-06
 
-- Initial version.
+- format document.
 
-## 0.0.2
+## 0.0.1 2023-04-05
 
-- format and document
+- initial release.

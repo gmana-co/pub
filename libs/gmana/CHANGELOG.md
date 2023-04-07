@@ -1,3 +1,7 @@
-## 0.0.1
+## 0.0.2 2023-04-06
 
-* TODO: Describe initial release.
+- format document.
+
+## 0.0.1 2023-04-05
+
+- initial release.

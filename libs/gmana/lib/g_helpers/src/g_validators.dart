@@ -21,7 +21,8 @@ bool isEmail(String str) {
   return emailReg.hasMatch(str.toLowerCase());
 }
 
-bool isFQDN(String str, {bool requireTld = true, bool allowUnderscores = false}) {
+bool isFQDN(String str,
+    {bool requireTld = true, bool allowUnderscores = false}) {
   final parts = str.split('.');
   if (requireTld) {
     final tld = parts.removeLast();
@@ -39,7 +40,9 @@ bool isFQDN(String str, {bool requireTld = true, bool allowUnderscores = false})
     if (!RegExp(r'^[a-z\\u00a1-\\uffff0-9-]+$').hasMatch(part)) {
       return false;
     }
-    if (part[0] == '-' || part[part.length - 1] == '-' || part.contains('---')) {
+    if (part[0] == '-' ||
+        part[part.length - 1] == '-' ||
+        part.contains('---')) {
       return false;
     }
   }
@@ -315,7 +318,9 @@ var _postalCodePatterns = {
   'AU': _fourDigit,
   'BE': _fourDigit,
   'BG': _fourDigit,
-  'CA': RegExp(r'^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][\s\-]?\d[ABCEGHJ-NPRSTV-Z]\d$', caseSensitive: false),
+  'CA': RegExp(
+      r'^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][\s\-]?\d[ABCEGHJ-NPRSTV-Z]\d$',
+      caseSensitive: false),
   'CH': _fourDigit,
   'CZ': RegExp(r'^\d{3}\s?\d{2}$'),
   'DE': _fiveDigit,
@@ -325,7 +330,8 @@ var _postalCodePatterns = {
   'ES': _fiveDigit,
   'FI': _fiveDigit,
   'FR': RegExp(r'^\d{2}\s?\d{3}$'),
-  'GB': RegExp(r'^(gir\s?0aa|[a-z]{1,2}\d[\da-z]?\s?(\d[a-z]{2})?)$', caseSensitive: false),
+  'GB': RegExp(r'^(gir\s?0aa|[a-z]{1,2}\d[\da-z]?\s?(\d[a-z]{2})?)$',
+      caseSensitive: false),
   'GR': RegExp(r'^\d{3}\s?\d{2}$'),
   'HR': RegExp(r'^([1-5]\d{4}$)'),
   'HU': _fourDigit,

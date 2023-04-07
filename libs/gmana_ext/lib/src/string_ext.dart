@@ -10,7 +10,10 @@ extension StringsToExtension on String {
     }
   }
 
-  String toTitleCase() => replaceAll(RegExp(' +'), ' ').split(' ').map((str) => str.toSentenceCase()).join(' ');
+  String toTitleCase() => replaceAll(RegExp(' +'), ' ')
+      .split(' ')
+      .map((str) => str.toSentenceCase())
+      .join(' ');
 }
 
 extension StringToNumExtension on String {

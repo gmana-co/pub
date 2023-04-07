@@ -1,6 +1,6 @@
 name: gmana_ext
-description: A utility helper to faster develop for internal.
-version: 0.0.1
+description: gmana extensions is a utility helpers to faster development for internal.
+version: 0.0.2
 repository: https://github.com/sun-sreng/pub/tree/main/libs/gmana_ext
 issue_tracker: https://github.com/sun-sreng/pub/issues
 
@@ -16,7 +16,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.1
-  # test: ^1.22.1
-
-flutter:
-  # uses-material-design: true

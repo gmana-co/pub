@@ -5,4 +5,4 @@ linter:
     avoid_print: false
     prefer_single_quotes: true
     use_super_parameters: true
-    lines_longer_than_80_chars: false
+    lines_longer_than_80_chars: true

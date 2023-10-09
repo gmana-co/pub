@@ -4,25 +4,19 @@ packages:
   - apps/**
   - libs/**
 
-command:
-  bootstrap:
-    usePubspecOverrides: true
+# command:
+#   bootstrap:
+#     usePubspecOverrides: true
 
 scripts:
   analyze:
-    run: |
-      melos exec -c 1 -- \
-        flutter analyze .
-    description: |
-      Run `dart analyze` in all packages.
-       - Note: you can also rely on your IDEs Dart Analysis / Issues window.
+    description: Analyze Dart code.
+    run: flutter analyze .
+
   format:
-    run: |
-      melos exec -c 1 -- \
-        dart format .
-    description: |
-      Run `dart analyze` in all packages.
-       - Note: you can also rely on your IDEs Dart Analysis / Issues window.
+    description: Format Dart code.
+    run: dart format .
+
   generate:
     run: melos run generate:dart && melos run generate:flutter
     description: Build all generated files for Dart & Flutter packages in this project.
@@ -42,16 +36,16 @@ scripts:
   test:dart:
     run: melos exec  -c 1 --fail-fast -- "\$MELOS_ROOT_PATH/scripts/coverage.sh"
     description: Run Dart tests for a specific package in this project.
-    select-package:
-      flutter: false
-      dir-exists: test
+    # select-package:
+    #   flutter: false
+    #   dir-exists: test
 
   test:flutter:
     run: melos exec --dir-exists="test" -c 1 --fail-fast -- "flutter test --coverage"
     description: Run Flutter tests for a specific package in this project.
-    select-package:
-      flutter: true
-      dir-exists: test
+    # select-package:
+    #   flutter: true
+    #   dir-exists: test
 
   lint:
     run: |

@@ -10,13 +10,16 @@ packages:
 
 scripts:
   analyze:
-    description: Analyze Dart code.
     run: flutter analyze .
+    description: analyze dart code
 
   format:
-    description: Format Dart code.
     run: dart format .
+    description: format dart code
 
+  fix:
+    run: dart format .
+    description: fix dart code
   generate:
     run: melos run generate:dart && melos run generate:flutter
     description: Build all generated files for Dart & Flutter packages in this project.
@@ -48,14 +51,14 @@ scripts:
     #   dir-exists: test
 
   lint:
-    run: |
-      melos exec -c 1 -- \
-        dart run custom_lint .
+    run: melos exec -c 1 -- dart run custom_lint .
     description: |
       Run `dart run custom_lint` in all packages.
        - Note: you can also rely on your IDEs Dart Analysis / Issues window.
 
   get: melos exec -- flutter pub get
+  update: melos exec -- dart pub update
+  upgrade: melos exec -- dart pub upgrade
   # analyze:
   #   exec: dart analyze .
   # format:

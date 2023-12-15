@@ -54,6 +54,8 @@ scripts:
     description: |
       Run `dart run custom_lint` in all packages.
        - Note: you can also rely on your IDEs Dart Analysis / Issues window.
+
+  get: melos exec -- flutter pub get
   # analyze:
   #   exec: dart analyze .
   # format:

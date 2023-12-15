@@ -13,11 +13,11 @@ dependencies:
     sdk: flutter
   cached_network_image: ^3.2.3
   flutter_cache_manager: ^3.3.0
-  dots_indicator: ^2.1.0
+  dots_indicator: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.1
+  flutter_lints: ^3.0.1
 
 flutter:

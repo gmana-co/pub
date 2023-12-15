@@ -10,16 +10,16 @@ packages:
 
 scripts:
   analyze:
-    run: flutter analyze .
+    exec: flutter analyze .
     description: analyze dart code
 
   format:
-    run: dart format .
+    exec: dart format .
     description: format dart code
 
   fix:
-    run: dart format .
-    description: fix dart code
+    exec: dart fix . --apply
+    description: format dart code
   generate:
     run: melos run generate:dart && melos run generate:flutter
     description: Build all generated files for Dart & Flutter packages in this project.
@@ -57,8 +57,10 @@ scripts:
        - Note: you can also rely on your IDEs Dart Analysis / Issues window.
 
   get: melos exec -- flutter pub get
-  update: melos exec -- dart pub update
-  upgrade: melos exec -- dart pub upgrade
+  update: melos exec -- flutter pub update
+  upgrade: melos exec -- flutter pub upgrade --major-versions
+  outdated:
+    exec: flutter pub outdated
   # analyze:
   #   exec: dart analyze .
   # format:

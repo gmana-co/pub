@@ -39,35 +39,19 @@ scripts:
   test:dart:
     run: melos exec  -c 1 --fail-fast -- "\$MELOS_ROOT_PATH/scripts/coverage.sh"
     description: Run Dart tests for a specific package in this project.
-    # select-package:
-    #   flutter: false
-    #   dir-exists: test
 
   test:flutter:
     run: melos exec --dir-exists="test" -c 1 --fail-fast -- "flutter test --coverage"
     description: Run Flutter tests for a specific package in this project.
-    # select-package:
-    #   flutter: true
-    #   dir-exists: test
-
-  lint:
-    run: melos exec -c 1 -- dart run custom_lint .
-    description: |
-      Run `dart run custom_lint` in all packages.
-       - Note: you can also rely on your IDEs Dart Analysis / Issues window.
 
   get: melos exec -- flutter pub get
+
   update: melos exec -- flutter pub update
+
   upgrade: melos exec -- flutter pub upgrade --major-versions
+
   outdated:
     exec: flutter pub outdated
-  # analyze:
-  #   exec: dart analyze .
-  # format:
-  #   exec: dart format . --set-exit-if-changed
-  # outdated:
-  #   exec: flutter pub outdated
-  # test:
-  #   exec: flutter test
-  # lint:
-  #   exec: dart run custom_lint
+
+  lint:
+    exec: dart run custom_lint

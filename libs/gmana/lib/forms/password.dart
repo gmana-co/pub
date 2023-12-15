@@ -1,7 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+part of 'forms.dart';
 
 class GPassword extends StatelessWidget {
+  final TextEditingController controller;
+
+  final TextInputAction textInputAction;
+  final bool obscureText;
+  final String labelText;
+  final String hintText;
+  final List<TextInputFormatter>? inputFormatters;
+  final String? Function(String?)? validator;
+  final void Function()? onIconPressed;
+  final void Function(String)? onChanged;
   const GPassword(
     this.controller, {
     super.key,
@@ -14,16 +23,6 @@ class GPassword extends StatelessWidget {
     this.onIconPressed,
     this.onChanged,
   });
-
-  final TextEditingController controller;
-  final TextInputAction textInputAction;
-  final bool obscureText;
-  final String labelText;
-  final String hintText;
-  final List<TextInputFormatter>? inputFormatters;
-  final String? Function(String?)? validator;
-  final void Function()? onIconPressed;
-  final void Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+part of 'forms.dart';
 
 class GText extends StatelessWidget {
+  final TextEditingController controller;
+
+  final TextInputAction textInputAction;
+  final String labelText;
+  final String hintText;
+  final List<TextInputFormatter>? inputFormatters;
+  final String? Function(String?)? validator;
+  final void Function(String)? onChanged;
   const GText(
     this.controller, {
     super.key,
@@ -12,14 +19,6 @@ class GText extends StatelessWidget {
     this.validator,
     this.onChanged,
   });
-
-  final TextEditingController controller;
-  final TextInputAction textInputAction;
-  final String labelText;
-  final String hintText;
-  final List<TextInputFormatter>? inputFormatters;
-  final String? Function(String?)? validator;
-  final void Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {

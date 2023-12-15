@@ -1,0 +1,15 @@
+{
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [280],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "matchingDocuments"
+  },
+  "dart.lineLength": 280,
+  "cSpell.words": ["ABCEGHJ", "ABCEGHJKLMNPRSTVXY", "DBFF", "DFFF", "FDCF", "FFDC", "FFEE", "FFEF", "NPRSTV", "uffff"]
+}

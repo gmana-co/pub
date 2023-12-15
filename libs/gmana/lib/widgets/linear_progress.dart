@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'widgets.dart';
 
 class GLinearProgress extends StatelessWidget {
   const GLinearProgress({super.key});

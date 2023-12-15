@@ -20,16 +20,12 @@ final List<Widget> imageSliders = imgList
                     child: Container(
                       decoration: const BoxDecoration(
                         gradient: LinearGradient(
-                          colors: [
-                            Color.fromARGB(200, 0, 0, 0),
-                            Color.fromARGB(0, 0, 0, 0)
-                          ],
+                          colors: [Color.fromARGB(200, 0, 0, 0), Color.fromARGB(0, 0, 0, 0)],
                           begin: Alignment.bottomCenter,
                           end: Alignment.topCenter,
                         ),
                       ),
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10.0, horizontal: 20.0),
+                      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                       child: Text(
                         'No. ${imgList.indexOf(item)} image',
                         style: const TextStyle(
@@ -291,10 +287,7 @@ class ImageSliderDemo extends StatelessWidget {
       appBar: AppBar(title: const Text('Image slider demo')),
       body: GManaSlider(
         options: CarouselOptions(),
-        items: imgList
-            .map((item) => Center(
-                child: Image.network(item, fit: BoxFit.cover, width: 1000)))
-            .toList(),
+        items: imgList.map((item) => Center(child: Image.network(item, fit: BoxFit.cover, width: 1000))).toList(),
       ),
     );
   }
@@ -543,8 +536,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(title: const Text('Carousel with indicator controller demo')),
+      appBar: AppBar(title: const Text('Carousel with indicator controller demo')),
       body: Column(children: [
         Expanded(
           child: GManaSlider(
@@ -569,14 +561,8 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
               child: Container(
                 width: 12.0,
                 height: 12.0,
-                margin:
-                    const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: (Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.black)
-                        .withOpacity(_current == entry.key ? 0.9 : 0.4)),
+                margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                decoration: BoxDecoration(shape: BoxShape.circle, color: (Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black).withOpacity(_current == entry.key ? 0.9 : 0.4)),
               ),
             );
           }).toList(),
@@ -660,9 +646,7 @@ class _PrefetchImageDemoState extends State<PrefetchImageDemo> {
           enlargeCenterPage: true,
         ),
         itemBuilder: (context, index, realIdx) {
-          return Center(
-              child:
-                  Image.network(images[index], fit: BoxFit.cover, width: 1000));
+          return Center(child: Image.network(images[index], fit: BoxFit.cover, width: 1000));
         },
       ),
     );

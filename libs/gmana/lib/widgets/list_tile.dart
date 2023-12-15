@@ -1,16 +1,11 @@
-import 'package:flutter/material.dart';
+part of 'widgets.dart';
 
 class GListTile extends StatelessWidget {
-  const GListTile(
-      {super.key,
-      required this.icon,
-      required this.title,
-      this.label = '',
-      this.onTap});
   final IconData icon;
   final void Function()? onTap;
   final String title;
   final String label;
+  const GListTile({super.key, required this.icon, required this.title, this.label = '', this.onTap});
 
   @override
   Widget build(BuildContext context) {

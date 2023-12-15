@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 
 class GDotIndicator extends StatelessWidget {
   final int count;
-  final double position;
+  final int position;
   final Color dotColor;
 
   const GDotIndicator({
     required this.count,
     required this.position,
     required this.dotColor,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

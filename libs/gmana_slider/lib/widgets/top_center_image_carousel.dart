@@ -31,8 +31,8 @@ class TCImageCarousel extends StatefulWidget {
     this.isOutOfStock = false,
     this.outOfStockText = '',
     this.outOfStockTextStyle,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<TCImageCarousel> createState() => _TCImageCarouselState();
@@ -41,14 +41,6 @@ class TCImageCarousel extends StatefulWidget {
 class _TCImageCarouselState extends State<TCImageCarousel> {
   late List<String> images;
   int position = 1;
-
-  @override
-  void initState() {
-    super.initState();
-    setState(() {
-      images = widget.images;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,8 +57,7 @@ class _TCImageCarouselState extends State<TCImageCarousel> {
                     viewportFraction: 1.0,
                     height: widget.height,
                     autoPlay: widget.autoPlay,
-                    autoPlayInterval:
-                        widget.autoPlayInterval ?? const Duration(seconds: 3),
+                    autoPlayInterval: widget.autoPlayInterval ?? const Duration(seconds: 3),
                     autoPlayCurve: widget.curves ?? Curves.fastOutSlowIn,
                     onPageChanged: (index, reason) {
                       // Update the state for current image position
@@ -118,7 +109,7 @@ class _TCImageCarouselState extends State<TCImageCarousel> {
                     left: kSmall,
                     child: GDotIndicator(
                       count: images.length,
-                      position: position.toDouble() - 1,
+                      position: position - 1,
                       dotColor: widget.dotColor,
                     ),
                   ),
@@ -133,16 +124,10 @@ class _TCImageCarouselState extends State<TCImageCarousel> {
                         return Container(
                           width: kSMedium,
                           height: kSMedium,
-                          margin: const EdgeInsets.symmetric(
-                              vertical: 8.0, horizontal: 4.0),
+                          margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color:
-                                (Theme.of(context).brightness == Brightness.dark
-                                        ? Colors.white
-                                        : widget.dotColor)
-                                    .withOpacity(
-                                        position == entry.key + 1 ? 0.9 : 0.4),
+                            color: (Theme.of(context).brightness == Brightness.dark ? Colors.white : widget.dotColor).withOpacity(position == entry.key + 1 ? 0.9 : 0.4),
                           ),
                         );
                       }).toList(),
@@ -152,5 +137,13 @@ class _TCImageCarouselState extends State<TCImageCarousel> {
               ],
             ),
           );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      images = widget.images;
+    });
   }
 }

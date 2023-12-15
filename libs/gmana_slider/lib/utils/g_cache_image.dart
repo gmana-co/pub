@@ -10,12 +10,12 @@ class GCacheImage extends StatelessWidget {
   final BoxFit? boxFit;
 
   const GCacheImage({
-    Key? key,
+    super.key,
     required this.imageUrl,
     this.width,
     this.height,
     this.boxFit,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

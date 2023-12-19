@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gmana_ext/gmana_ext.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const GApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class GApp extends StatelessWidget {
+  const GApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -29,8 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,23 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+              ].flatten().toString(),
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
-  }
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
   }
 }

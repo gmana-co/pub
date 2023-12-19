@@ -1,25 +1,4 @@
-extension StringsToExtension on String {
-  String toSentenceCase() {
-    switch (length) {
-      case 0:
-        return this;
-      case 1:
-        return toUpperCase();
-      default:
-        return substring(0, 1).toUpperCase() + substring(1);
-    }
-  }
-
-  String toTitleCase() => replaceAll(RegExp(' +'), ' ')
-      .split(' ')
-      .map((str) => str.toSentenceCase())
-      .join(' ');
-}
-
-extension StringToNumExtension on String {
-  int get toInt => int.tryParse(this) ?? 0;
-  double get toDouble => double.tryParse(this) ?? 0.0;
-}
+part of 'gmana_ext.dart';
 
 // extension StringCrypto5Extension on String {
 //   String get md5 => crypto.md5.convert(codeUnits).toString();
@@ -46,4 +25,24 @@ extension DurationString on String {
       throw Exception('Invalid duration string: $this');
     }
   }
+}
+
+extension StringsToExtension on String {
+  String toSentenceCase() {
+    switch (length) {
+      case 0:
+        return this;
+      case 1:
+        return toUpperCase();
+      default:
+        return substring(0, 1).toUpperCase() + substring(1);
+    }
+  }
+
+  String toTitleCase() => replaceAll(RegExp(' +'), ' ').split(' ').map((str) => str.toSentenceCase()).join(' ');
+}
+
+extension StringToNumExtension on String {
+  double get toDouble => double.tryParse(this) ?? 0.0;
+  int get toInt => int.tryParse(this) ?? 0;
 }

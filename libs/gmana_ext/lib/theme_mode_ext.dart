@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'gmana_ext.dart';
 
 extension ThemeModeExt on ThemeMode {
   IconData toIcon() {
@@ -24,6 +24,21 @@ extension ThemeModeExt on ThemeMode {
         return 'Light Mode';
       default:
         return 'System Mode';
+    }
+  }
+}
+
+extension ThemeModeStringExt on String {
+  ThemeMode toThemeMode() {
+    switch (this) {
+      case 'system':
+        return ThemeMode.system;
+      case 'dark':
+        return ThemeMode.dark;
+      case 'light':
+        return ThemeMode.light;
+      default:
+        return ThemeMode.system;
     }
   }
 }

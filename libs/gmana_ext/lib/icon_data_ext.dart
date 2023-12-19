@@ -1,6 +1,4 @@
-import 'dart:convert';
-
-import 'package:flutter/material.dart';
+part of 'gmana_ext.dart';
 
 extension IconDataExt on IconData {
   String toIconDataString() {

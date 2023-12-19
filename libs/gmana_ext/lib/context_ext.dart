@@ -1,6 +1,14 @@
-import 'package:flutter/material.dart';
+part of 'gmana_ext.dart';
 
 extension ShowSnackBar on BuildContext {
+  void showErrorSnackBar({required String message}) {
+    showSnackBar(
+      message: message,
+      backgroundColor: Colors.red,
+      color: Colors.white,
+    );
+  }
+
   void showSnackBar({
     required String message,
     Color color = Colors.grey,
@@ -14,14 +22,6 @@ extension ShowSnackBar on BuildContext {
         ),
         backgroundColor: backgroundColor,
       ),
-    );
-  }
-
-  void showErrorSnackBar({required String message}) {
-    showSnackBar(
-      message: message,
-      backgroundColor: Colors.red,
-      color: Colors.white,
     );
   }
 }

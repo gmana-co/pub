@@ -3,11 +3,7 @@
 ## install
 
 ```yaml
-dependencies:
-  gmana_ext:
-    git:
-      url: https://github.com/sun-sreng/gmana-pub.git
-      path: gmana_ext
+flutter pub add gmana_ext
 ```
 
 ## usage

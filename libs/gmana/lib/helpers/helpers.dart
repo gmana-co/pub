@@ -5,3 +5,4 @@ part 'id.dart';
 part 'reg.dart';
 part 'types.dart';
 part 'validators.dart';
+part 'is.dart';

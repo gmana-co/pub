@@ -1,3 +1,15 @@
+## 0.0.10 (2023-12-24)
+
+- add toThemeModeLabel
+
+## 0.0.9 (2023-12-24)
+
+- add toThemeModeIcon
+
+## 0.0.8 (2023-12-24)
+
+- add toThemeMode
+
 ## 0.0.7 (2023-12-19)
 
 - refactor structure

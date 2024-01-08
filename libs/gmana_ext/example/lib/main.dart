@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gmana_ext/gmana_ext.dart';
+import 'package:gmana_ext/iterable_ext.dart';
 
 void main() {
   runApp(const GApp());
@@ -41,17 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              [
-                [1, 2, 3],
-                [4, 5, 6],
-                [7, 8, 9]
-              ].flatten().toString(),
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            Text([
+              [1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]
+            ].flatten().toString()),
+            Text([1, 2, 3].sum().toString())
           ],
         ),
       ),

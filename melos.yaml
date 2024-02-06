@@ -4,20 +4,9 @@ packages:
   - apps/**
   - libs/**
 
-command:
-  version:
-    # Generate commit links in package changelogs.
-    linkToCommits: true
-    # Additionally build a changelog at the root of the workspace.
-    workspaceChangelog: true
-    hooks:
-      preCommit: melos run update-version
-
-  bootstrap:
-    # It seems so that running "pub get" in parallel has some issues (like
-    # https://github.com/dart-lang/pub/issues/3404). Disabling this feature
-    # makes the CI much more stable.
-    runPubGetInParallel: false
+# command:
+#   bootstrap:
+#     usePubspecOverrides: true
 
 scripts:
   analyze:
@@ -66,20 +55,3 @@ scripts:
 
   lint:
     exec: dart run custom_lint
-
-  update-version:
-    run: |
-      # Loop through the packages directory
-      for d in packages/*/ ; do
-        # Get version number
-        version=$(awk '/version:/ { 
-          pos=match($2, /[0-9]+\.[0-9]+\.[0-9]+/);
-          print substr($2, pos); }' $d/pubspec.yaml)
-        # Update version.dart file
-        echo "const version = '$version';" > $d/lib/src/version.dart
-      done
-      # Remove the version file for yes_another_json_isolate
-      rm packages/yet_another_json_isolate/lib/src/version.dart
-      # Stage the version.dart file change
-      git add packages/*/lib/src/version.dart
-    description: Updates the version.dart file for each packages except yet_another_json_isolate

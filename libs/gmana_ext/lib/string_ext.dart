@@ -1,10 +1,17 @@
 part of 'gmana_ext.dart';
 
-// extension StringCrypto5Extension on String {
-//   String get md5 => crypto.md5.convert(codeUnits).toString();
-// }
+extension StringExt on String {
+  double get toDouble => double.tryParse(this) ?? 0.0;
 
-extension DurationString on String {
+  int get toInt => int.tryParse(this) ?? 0;
+
+  /// Calculate the reading time
+  int calculateReadingTime() {
+    final int wordCount = split(RegExp(r'\s+')).length;
+    final double readingTime = wordCount / 225;
+    return readingTime.ceil();
+  }
+
   /// Assumes a string (roughly) of the format '\d{1,2}:\d{2}'
   Duration toDuration() {
     final chunks = split(':');
@@ -25,9 +32,7 @@ extension DurationString on String {
       throw Exception('Invalid duration string: $this');
     }
   }
-}
 
-extension StringsToExtension on String {
   String toSentenceCase() {
     switch (length) {
       case 0:
@@ -40,9 +45,4 @@ extension StringsToExtension on String {
   }
 
   String toTitleCase() => replaceAll(RegExp(' +'), ' ').split(' ').map((str) => str.toSentenceCase()).join(' ');
-}
-
-extension StringToNumExtension on String {
-  double get toDouble => double.tryParse(this) ?? 0.0;
-  int get toInt => int.tryParse(this) ?? 0;
 }

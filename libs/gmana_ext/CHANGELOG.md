@@ -1,3 +1,10 @@
+## 0.0.11 (2024-03-27)
+
+- add push
+- add pushAndRemoveUntil
+- add calculateReadingTime
+- update showSnackBar
+
 ## 0.0.10 (2023-12-24)
 
 - add toThemeModeLabel

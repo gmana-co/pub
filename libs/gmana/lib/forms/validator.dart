@@ -33,7 +33,9 @@ class EmailValidator extends TextFieldValidator {
   EmailValidator({required String errorText}) : super(errorText);
 
   @override
-  bool isValid(String? value) => hasMatch(emailRegStr, value!, caseSensitive: false);
+  bool isValid(String? value) {
+    return hasMatch(emailRegStr, value!, caseSensitive: false);
+  }
 }
 
 abstract class FieldValidator<T> {
@@ -160,17 +162,22 @@ class PatternValidator extends TextFieldValidator {
   final Pattern pattern;
   final bool caseSensitive;
 
-  PatternValidator(this.pattern, {required String errorText, this.caseSensitive = true}) : super(errorText);
+  PatternValidator(this.pattern,
+      {required String errorText, this.caseSensitive = true})
+      : super(errorText);
 
   @override
-  bool isValid(String? value) => hasMatch(pattern.toString(), value!, caseSensitive: caseSensitive);
+  bool isValid(String? value) =>
+      hasMatch(pattern.toString(), value!, caseSensitive: caseSensitive);
 }
 
 class RangeValidator extends TextFieldValidator {
   final num min;
   final num max;
 
-  RangeValidator({required this.min, required this.max, required String errorText}) : super(errorText);
+  RangeValidator(
+      {required this.min, required this.max, required String errorText})
+      : super(errorText);
 
   @override
   bool isValid(String? value) {

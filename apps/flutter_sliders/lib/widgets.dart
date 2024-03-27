@@ -194,7 +194,13 @@ class _WidgetsViewState extends State<WidgetsView> {
             const Text(
               'Bottom Left dot',
             ),
-            BLImageCarousel(images: images, height: 200, boxFit: BoxFit.fill, autoPlay: true, dotColor: Colors.white, dotType: DotType.rounded),
+            BLImageCarousel(
+                images: images,
+                height: 200,
+                boxFit: BoxFit.fill,
+                autoPlay: true,
+                dotColor: Colors.white,
+                dotType: DotType.rounded),
             const SizedBox(
               height: 8,
             ),

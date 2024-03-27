@@ -73,7 +73,8 @@ class _BCTLImageCarouselState extends State<BCTLImageCarousel> {
                     viewportFraction: 1.0,
                     height: widget.height,
                     autoPlay: widget.autoPlay,
-                    autoPlayInterval: widget.autoPlayInterval ?? const Duration(seconds: 3),
+                    autoPlayInterval:
+                        widget.autoPlayInterval ?? const Duration(seconds: 3),
                     autoPlayCurve: widget.curves ?? Curves.fastOutSlowIn,
                     onPageChanged: (index, reason) {
                       // Update the state for current image position
@@ -123,7 +124,8 @@ class _BCTLImageCarouselState extends State<BCTLImageCarousel> {
                     top: kSmall,
                     left: kSmall,
                     child: Container(
-                      padding: const EdgeInsets.only(left: kXSmall, right: kXSmall),
+                      padding:
+                          const EdgeInsets.only(left: kXSmall, right: kXSmall),
                       decoration: BoxDecoration(
                         color: widget.boxColor,
                         borderRadius: BorderRadius.circular(kMedium),
@@ -158,10 +160,16 @@ class _BCTLImageCarouselState extends State<BCTLImageCarousel> {
                           return Container(
                             width: kSMedium,
                             height: kSMedium,
-                            margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                            margin: const EdgeInsets.symmetric(
+                                vertical: 8.0, horizontal: 4.0),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: (Theme.of(context).brightness == Brightness.dark ? Colors.white : widget.dotColor).withOpacity(position == entry.key + 1 ? 0.9 : 0.4),
+                              color: (Theme.of(context).brightness ==
+                                          Brightness.dark
+                                      ? Colors.white
+                                      : widget.dotColor)
+                                  .withOpacity(
+                                      position == entry.key + 1 ? 0.9 : 0.4),
                             ),
                           );
                         }).toList(),

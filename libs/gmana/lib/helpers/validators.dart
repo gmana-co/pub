@@ -13,12 +13,14 @@ class Validators {
   static String? validateName(String? value) {
     if (value == null || value.isEmpty) return 'Name is Required.';
     final RegExp nameExp = RegExp(r'^[A-za-z ]+$');
-    if (!nameExp.hasMatch(value)) return 'Please enter only alphabetical characters.';
+    if (!nameExp.hasMatch(value))
+      return 'Please enter only alphabetical characters.';
     return null;
   }
 
   static String? validatePassword(String? value) {
-    if (value == null || value.isEmpty || value.length < 6) return 'Please enter a valid password.';
+    if (value == null || value.isEmpty || value.length < 6)
+      return 'Please enter a valid password.';
     return null;
   }
 }

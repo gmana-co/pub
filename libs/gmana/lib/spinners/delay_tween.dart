@@ -9,5 +9,7 @@ class DelayTween extends Tween<double> {
   double evaluate(Animation<double> animation) => lerp(animation.value);
 
   @override
-  double lerp(double t) => super.lerp((math.sin((t - delay) * 2 * math.pi) + 1) / 2);
+  double lerp(double t) {
+    return super.lerp((math.sin((t - delay) * 2 * math.pi) + 1) / 2);
+  }
 }

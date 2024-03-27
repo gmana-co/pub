@@ -10,10 +10,12 @@ RegExp asciiReg = RegExp(asciiRegStr);
 String asciiRegStr = r'^[\x00-\x7F]+$';
 
 RegExp base64Reg = RegExp(base64RegStr);
-String base64RegStr = r'^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=|[A-Za-z0-9+\/]{4})$';
+String base64RegStr =
+    r'^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=|[A-Za-z0-9+\/]{4})$';
 
 RegExp creditCardReg = RegExp(creditCardRegStr);
-String creditCardRegStr = r'^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$';
+String creditCardRegStr =
+    r'^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$';
 
 RegExp emailReg = RegExp(emailRegStr);
 String emailRegStr =
@@ -23,16 +25,19 @@ RegExp fiveDigit = RegExp(fiveDigitStr);
 String fiveDigitStr = r'^\d{5}$';
 
 RegExp floatReg = RegExp(floatRegStr);
-String floatRegStr = r'^(?:-?(?:[0-9]+))?(?:\.[0-9]*)?(?:[eE][\+\-]?(?:[0-9]+))?$';
+String floatRegStr =
+    r'^(?:-?(?:[0-9]+))?(?:\.[0-9]*)?(?:[eE][\+\-]?(?:[0-9]+))?$';
 
 RegExp fourDigit = RegExp(fourDigitStr);
 String fourDigitStr = r'^\d{4}$';
 
 RegExp fullWidthReg = RegExp(fullWidthRegStr);
-String fullWidthRegStr = r'[^\u0020-\u007E\uFF61-\uFF9F\uFFA0-\uFFDC\uFFE8-\uFFEE0-9a-zA-Z]';
+String fullWidthRegStr =
+    r'[^\u0020-\u007E\uFF61-\uFF9F\uFFA0-\uFFDC\uFFE8-\uFFEE0-9a-zA-Z]';
 
 RegExp halfWidthReg = RegExp(halfWidthRegStr);
-String halfWidthRegStr = r'[\u0020-\u007E\uFF61-\uFF9F\uFFA0-\uFFDC\uFFE8-\uFFEE0-9a-zA-Z]';
+String halfWidthRegStr =
+    r'[\u0020-\u007E\uFF61-\uFF9F\uFFA0-\uFFDC\uFFE8-\uFFEE0-9a-zA-Z]';
 
 RegExp hexadecimalReg = RegExp(hexadecimalRegStr);
 String hexadecimalRegStr = r'^[0-9a-fA-F]+$';
@@ -67,7 +72,9 @@ Map<String, RegExp> postalCodePatterns = {
   'AU': fourDigit,
   'BE': fourDigit,
   'BG': fourDigit,
-  'CA': RegExp(r'^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][\s\-]?\d[ABCEGHJ-NPRSTV-Z]\d$', caseSensitive: false),
+  'CA': RegExp(
+      r'^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][\s\-]?\d[ABCEGHJ-NPRSTV-Z]\d$',
+      caseSensitive: false),
   'CH': fourDigit,
   'CZ': RegExp(r'^\d{3}\s?\d{2}$'),
   'DE': fiveDigit,
@@ -77,7 +84,8 @@ Map<String, RegExp> postalCodePatterns = {
   'ES': fiveDigit,
   'FI': fiveDigit,
   'FR': RegExp(r'^\d{2}\s?\d{3}$'),
-  'GB': RegExp(r'^(gir\s?0aa|[a-z]{1,2}\d[\da-z]?\s?(\d[a-z]{2})?)$', caseSensitive: false),
+  'GB': RegExp(r'^(gir\s?0aa|[a-z]{1,2}\d[\da-z]?\s?(\d[a-z]{2})?)$',
+      caseSensitive: false),
   'GR': RegExp(r'^\d{3}\s?\d{2}$'),
   'HR': RegExp(r'^([1-5]\d{4}$)'),
   'HU': fourDigit,
@@ -122,8 +130,12 @@ RegExp threeDigit = RegExp(threeDigitStr);
 String threeDigitStr = r'^\d{3}$';
 
 Map<String, RegExp> uuidReg = {
-  '3': RegExp(r'^[0-9A-F]{8}-[0-9A-F]{4}-3[0-9A-F]{3}-[0-9A-F]{4}-[0-9A-F]{12}$'),
-  '4': RegExp(r'^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$'),
-  '5': RegExp(r'^[0-9A-F]{8}-[0-9A-F]{4}-5[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$'),
-  'all': RegExp(r'^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$')
+  '3': RegExp(
+      r'^[0-9A-F]{8}-[0-9A-F]{4}-3[0-9A-F]{3}-[0-9A-F]{4}-[0-9A-F]{12}$'),
+  '4': RegExp(
+      r'^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$'),
+  '5': RegExp(
+      r'^[0-9A-F]{8}-[0-9A-F]{4}-5[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$'),
+  'all':
+      RegExp(r'^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$')
 };

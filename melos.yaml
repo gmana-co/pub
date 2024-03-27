@@ -14,7 +14,7 @@ scripts:
     description: analyze dart code
 
   format:
-    exec: dart format . --line-length=180
+    exec: dart format .
     description: format dart code
 
   fix:

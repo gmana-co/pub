@@ -1,15 +1,30 @@
 part of 'forms.dart';
 
 final emailValidators = MultiValidator([
-  RequiredValidator(errorText: 'Email is required'),
-  EmailValidator(errorText: 'Email is invalid'),
+  RequiredValidator(
+    errorText: 'Email is required',
+  ),
+  EmailValidator(
+    errorText: 'Email is invalid',
+  ),
 ]);
 
 final passwordValidators = MultiValidator([
-  RequiredValidator(errorText: 'Password is required'),
-  MinLengthValidator(8, errorText: 'Password must be at least 8 digits long'),
-  PatternValidator(r'(?=.*[A-Z])', errorText: 'Passwords must have at least one uppercase character'),
-  PatternValidator(r'(?=.*?[#?!@$%^&*-])', errorText: 'Passwords must have at least one special character')
+  RequiredValidator(
+    errorText: 'Password is required',
+  ),
+  MinLengthValidator(
+    8,
+    errorText: 'Password must be at least 8 digits long',
+  ),
+  PatternValidator(
+    r'(?=.*[A-Z])',
+    errorText: 'Passwords must have at least one uppercase character',
+  ),
+  PatternValidator(
+    r'(?=.*?[#?!@$%^&*-])',
+    errorText: 'Passwords must have at least one special character',
+  )
 ]);
 
 typedef FormFieldValidator<T> = String? Function(T? value);
@@ -37,7 +52,11 @@ class LengthRangeValidator extends TextFieldValidator {
   final int min;
   final int max;
 
-  LengthRangeValidator({required this.min, required this.max, required String errorText}) : super(errorText);
+  LengthRangeValidator({
+    required this.min,
+    required this.max,
+    required String errorText,
+  }) : super(errorText);
 
   @override
   bool get ignoreEmptyValues => false;

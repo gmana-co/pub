@@ -200,7 +200,8 @@ class CarouselOptions {
       reverse: reverse ?? this.reverse,
       autoPlay: autoPlay ?? this.autoPlay,
       autoPlayInterval: autoPlayInterval ?? this.autoPlayInterval,
-      autoPlayAnimationDuration: autoPlayAnimationDuration ?? this.autoPlayAnimationDuration,
+      autoPlayAnimationDuration:
+          autoPlayAnimationDuration ?? this.autoPlayAnimationDuration,
       autoPlayCurve: autoPlayCurve ?? this.autoPlayCurve,
       enlargeCenterPage: enlargeCenterPage ?? this.enlargeCenterPage,
       onPageChanged: onPageChanged ?? this.onPageChanged,
@@ -209,8 +210,10 @@ class CarouselOptions {
       pageSnapping: pageSnapping ?? this.pageSnapping,
       scrollDirection: scrollDirection ?? this.scrollDirection,
       pauseAutoPlayOnTouch: pauseAutoPlayOnTouch ?? this.pauseAutoPlayOnTouch,
-      pauseAutoPlayOnManualNavigate: pauseAutoPlayOnManualNavigate ?? this.pauseAutoPlayOnManualNavigate,
-      pauseAutoPlayInFiniteScroll: pauseAutoPlayInFiniteScroll ?? this.pauseAutoPlayInFiniteScroll,
+      pauseAutoPlayOnManualNavigate:
+          pauseAutoPlayOnManualNavigate ?? this.pauseAutoPlayOnManualNavigate,
+      pauseAutoPlayInFiniteScroll:
+          pauseAutoPlayInFiniteScroll ?? this.pauseAutoPlayInFiniteScroll,
       pageViewKey: pageViewKey ?? this.pageViewKey,
       enlargeStrategy: enlargeStrategy ?? this.enlargeStrategy,
       enlargeFactor: enlargeFactor ?? this.enlargeFactor,

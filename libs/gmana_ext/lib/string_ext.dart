@@ -44,5 +44,8 @@ extension StringExt on String {
     }
   }
 
-  String toTitleCase() => replaceAll(RegExp(' +'), ' ').split(' ').map((str) => str.toSentenceCase()).join(' ');
+  String toTitleCase() => replaceAll(RegExp(' +'), ' ')
+      .split(' ')
+      .map((str) => str.toSentenceCase())
+      .join(' ');
 }

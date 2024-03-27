@@ -210,5 +210,7 @@ abstract class TextFieldValidator extends FieldValidator<String?> {
     return (ignoreEmptyValues && value!.isEmpty) ? null : super.call(value);
   }
 
-  bool hasMatch(String pattern, String input, {bool caseSensitive = true}) => RegExp(pattern, caseSensitive: caseSensitive).hasMatch(input);
+  bool hasMatch(String pattern, String input, {bool caseSensitive = true}) {
+    return RegExp(pattern, caseSensitive: caseSensitive).hasMatch(input);
+  }
 }

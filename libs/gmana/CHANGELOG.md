@@ -1,3 +1,8 @@
+## 0.0.6 (2024-03-27)
+
+- failure model
+- server exception model
+
 ## 0.0.5 (2023-12-19)
 
 - add Validators

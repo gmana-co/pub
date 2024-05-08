@@ -5,12 +5,7 @@ class GListTile extends StatelessWidget {
   final void Function()? onTap;
   final String title;
   final String label;
-  const GListTile(
-      {super.key,
-      required this.icon,
-      required this.title,
-      this.label = '',
-      this.onTap});
+  const GListTile({super.key, required this.icon, required this.title, this.label = '', this.onTap});
 
   @override
   Widget build(BuildContext context) {

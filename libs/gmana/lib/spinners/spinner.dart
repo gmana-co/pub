@@ -57,15 +57,9 @@ class GWaveCustomPaint extends CustomPainter {
     required Size size,
   }) : super(repaint: controller) {
     _waveMaxRadius = _lineRadius(size.width, 10);
-    _spinnerAnimation = Tween<double>(begin: 0, end: math.pi * 2)
-        .animate(CurvedAnimation(curve: curve, parent: controller));
-    _waveVerticalShiftAnimation =
-        Tween<double>(begin: _waveMaxRadius, end: -_waveMaxRadius)
-            .animate(CurvedAnimation(curve: curve, parent: controller));
-    _waveAmplitudeAnimation = !hasChild
-        ? Tween<double>(begin: 0, end: -4)
-            .animate(CurvedAnimation(curve: curve, parent: controller))
-        : null;
+    _spinnerAnimation = Tween<double>(begin: 0, end: math.pi * 2).animate(CurvedAnimation(curve: curve, parent: controller));
+    _waveVerticalShiftAnimation = Tween<double>(begin: _waveMaxRadius, end: -_waveMaxRadius).animate(CurvedAnimation(curve: curve, parent: controller));
+    _waveAmplitudeAnimation = !hasChild ? Tween<double>(begin: 0, end: -4).animate(CurvedAnimation(curve: curve, parent: controller)) : null;
   }
 
   @override
@@ -111,8 +105,7 @@ class GWaveCustomPaint extends CustomPainter {
     final lineRadius = _lineRadius(size.width, lineRadiusMultiplier) * 2;
     final centerOffset = Offset(size.width / 2, size.width / 2);
     canvas.drawArc(
-      Rect.fromCenter(
-          center: centerOffset, width: lineRadius, height: lineRadius),
+      Rect.fromCenter(center: centerOffset, width: lineRadius, height: lineRadius),
       startAngle,
       sweepAngle,
       false,
@@ -130,8 +123,7 @@ class GWaveCustomPaint extends CustomPainter {
       height: Size.fromRadius(_waveMaxRadius).width,
     );
     canvas.save();
-    canvas.clipRRect(
-        RRect.fromRectAndRadius(bounds, Radius.circular(_waveMaxRadius)));
+    canvas.clipRRect(RRect.fromRectAndRadius(bounds, Radius.circular(_waveMaxRadius)));
     canvas.translate(size.width / 2, size.height / 2);
 
     final path = Path()..moveTo(-_waveMaxRadius, _waveMaxRadius);
@@ -153,19 +145,16 @@ class GWaveCustomPaint extends CustomPainter {
     canvas.restore();
   }
 
-  double _lineRadius(double width, double multiplier) =>
-      (width - (multiplier * math.max(2.5, width * 0.015))) / 2;
+  double _lineRadius(double width, double multiplier) => (width - (multiplier * math.max(2.5, width * 0.015))) / 2;
 }
 
-class _GSpinnerState extends State<GSpinner>
-    with SingleTickerProviderStateMixin {
+class _GSpinnerState extends State<GSpinner> with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      final size = Size.square(math.min(
-          math.min(constraints.maxWidth, constraints.maxHeight), widget.size));
+      final size = Size.square(math.min(math.min(constraints.maxWidth, constraints.maxHeight), widget.size));
       final childMaxSize = Size.square(widget.size * 0.7);
       return SizedBox.fromSize(
         size: size,
@@ -184,11 +173,7 @@ class _GSpinnerState extends State<GSpinner>
                 controller: _controller,
               ),
             ),
-            if (widget.child != null)
-              Center(
-                  child: ConstrainedBox(
-                      constraints: BoxConstraints.tight(childMaxSize),
-                      child: widget.child))
+            if (widget.child != null) Center(child: ConstrainedBox(constraints: BoxConstraints.tight(childMaxSize), child: widget.child))
           ],
         ),
       );
@@ -207,8 +192,6 @@ class _GSpinnerState extends State<GSpinner>
   void initState() {
     super.initState();
 
-    _controller = (widget.controller ??
-        AnimationController(duration: widget.duration, vsync: this))
-      ..repeat();
+    _controller = (widget.controller ?? AnimationController(duration: widget.duration, vsync: this))..repeat();
   }
 }

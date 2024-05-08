@@ -11,6 +11,7 @@ class GPassword extends StatelessWidget {
   final String? Function(String?)? validator;
   final void Function()? onIconPressed;
   final void Function(String)? onChanged;
+
   const GPassword(
     this.controller, {
     super.key,

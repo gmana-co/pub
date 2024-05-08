@@ -15,10 +15,7 @@ class ScaleYWidget extends AnimatedWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Transform(
-        transform: Matrix4.identity()..scale(1.0, scale.value, 1.0),
-        alignment: alignment,
-        child: child);
+    return Transform(transform: Matrix4.identity()..scale(1.0, scale.value, 1.0), alignment: alignment, child: child);
   }
 }
 
@@ -40,10 +37,7 @@ class SpinKitWave extends StatefulWidget {
     this.itemCount = 5,
     this.duration = const Duration(milliseconds: 1200),
     this.controller,
-  })  : assert(
-            !(itemBuilder is IndexedWidgetBuilder && color is Color) &&
-                !(itemBuilder == null && color == null),
-            'You should specify either a itemBuilder or a color'),
+  })  : assert(!(itemBuilder is IndexedWidgetBuilder && color is Color) && !(itemBuilder == null && color == null), 'You should specify either a itemBuilder or a color'),
         assert(itemCount >= 2, 'itemCount Cant be less then 2 ');
 
   @override
@@ -52,8 +46,7 @@ class SpinKitWave extends StatefulWidget {
 
 enum SpinKitWaveType { start, end, center }
 
-class _SpinKitWaveState extends State<SpinKitWave>
-    with SingleTickerProviderStateMixin {
+class _SpinKitWaveState extends State<SpinKitWave> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
   @override
@@ -66,11 +59,8 @@ class _SpinKitWaveState extends State<SpinKitWave>
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: List.generate(bars.length, (i) {
             return ScaleYWidget(
-              scaleY: DelayTween(begin: .4, end: 1.0, delay: bars[i])
-                  .animate(_controller),
-              child: SizedBox.fromSize(
-                  size: Size(widget.size / widget.itemCount, widget.size),
-                  child: _itemBuilder(i)),
+              scaleY: DelayTween(begin: .4, end: 1.0, delay: bars[i]).animate(_controller),
+              child: SizedBox.fromSize(size: Size(widget.size / widget.itemCount, widget.size), child: _itemBuilder(i)),
             );
           }),
         ),
@@ -102,25 +92,20 @@ class _SpinKitWaveState extends State<SpinKitWave>
   void initState() {
     super.initState();
 
-    _controller = (widget.controller ??
-        AnimationController(vsync: this, duration: widget.duration))
-      ..repeat();
+    _controller = (widget.controller ?? AnimationController(vsync: this, duration: widget.duration))..repeat();
   }
 
   List<double> _centerAnimationDelay(int count) {
     return <double>[
-      ...List<double>.generate(
-          count ~/ 2, (index) => -1.0 + (index * 0.2) + 0.2).reversed,
+      ...List<double>.generate(count ~/ 2, (index) => -1.0 + (index * 0.2) + 0.2).reversed,
       if (count.isOdd) -1.0,
-      ...List<double>.generate(
-          count ~/ 2, (index) => -1.0 + (index * 0.2) + 0.2),
+      ...List<double>.generate(count ~/ 2, (index) => -1.0 + (index * 0.2) + 0.2),
     ];
   }
 
   List<double> _endAnimationDelay(int count) {
     return <double>[
-      ...List<double>.generate(
-          count ~/ 2, (index) => -1.0 + (index * 0.1) + 0.1).reversed,
+      ...List<double>.generate(count ~/ 2, (index) => -1.0 + (index * 0.1) + 0.1).reversed,
       if (count.isOdd) -1.0,
       ...List<double>.generate(
         count ~/ 2,
@@ -129,14 +114,11 @@ class _SpinKitWaveState extends State<SpinKitWave>
     ];
   }
 
-  Widget _itemBuilder(int index) => widget.itemBuilder != null
-      ? widget.itemBuilder!(context, index)
-      : DecoratedBox(decoration: BoxDecoration(color: widget.color));
+  Widget _itemBuilder(int index) => widget.itemBuilder != null ? widget.itemBuilder!(context, index) : DecoratedBox(decoration: BoxDecoration(color: widget.color));
 
   List<double> _startAnimationDelay(int count) {
     return <double>[
-      ...List<double>.generate(
-          count ~/ 2, (index) => -1.0 - (index * 0.1) - 0.1).reversed,
+      ...List<double>.generate(count ~/ 2, (index) => -1.0 - (index * 0.1) - 0.1).reversed,
       if (count.isOdd) -1.0,
       ...List<double>.generate(
         count ~/ 2,

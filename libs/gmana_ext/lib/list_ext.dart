@@ -5,8 +5,7 @@ extension CompactMap<T> on Iterable<T?> {
   /// [1, 2, null, 3].compactMap();
   /// // result: (1, 2, 3)
   /// ```
-  Iterable<T> compactMap<E>([E? Function(T?)? transform]) =>
-      map(transform ?? (e) => e).where((e) => e != null).cast();
+  Iterable<T> compactMap<E>([E? Function(T?)? transform]) => map(transform ?? (e) => e).where((e) => e != null).cast();
 }
 
 extension ListFlattenExtension<E> on List<List<E>> {

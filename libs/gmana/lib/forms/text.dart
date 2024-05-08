@@ -9,6 +9,7 @@ class GText extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
+
   const GText(
     this.controller, {
     super.key,

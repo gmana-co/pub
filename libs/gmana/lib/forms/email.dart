@@ -17,6 +17,7 @@ class GEmail extends StatelessWidget {
     this.hintText = 'Enter your email',
     this.onChanged,
   });
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(

@@ -9,6 +9,7 @@ class GNumber extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
+
   const GNumber(
     this.controller, {
     super.key,

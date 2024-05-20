@@ -1,4 +1,4 @@
-part of 'widgets.dart';
+part of 'gmana.dart';
 
 class GCircularProgress extends StatelessWidget {
   const GCircularProgress({super.key});

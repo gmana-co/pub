@@ -1,4 +1,4 @@
-part of 'forms.dart';
+part of 'gmana.dart';
 
 final emailValidators = MultiValidator([
   RequiredValidator(

@@ -1,4 +1,4 @@
-part of 'helpers.dart';
+part of 'gmana.dart';
 
 Color darken(Color color, [double amount = .1]) {
   assert(amount >= 0 && amount <= 1);

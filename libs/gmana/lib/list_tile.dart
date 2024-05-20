@@ -1,4 +1,4 @@
-part of 'widgets.dart';
+part of 'gmana.dart';
 
 class GListTile extends StatelessWidget {
   final IconData icon;

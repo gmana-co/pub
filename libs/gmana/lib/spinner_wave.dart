@@ -1,4 +1,4 @@
-part of 'spinners.dart';
+part of 'gmana.dart';
 
 class ScaleYWidget extends AnimatedWidget {
   final Widget child;

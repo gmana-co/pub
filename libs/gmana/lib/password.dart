@@ -1,20 +1,27 @@
-part of 'forms.dart';
+part of 'gmana.dart';
 
-class GEmail extends StatelessWidget {
+class GPassword extends StatelessWidget {
   final TextEditingController controller;
 
   final TextInputAction textInputAction;
+  final bool obscureText;
+  final String labelText;
   final String hintText;
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
+  final void Function()? onIconPressed;
   final void Function(String)? onChanged;
-  const GEmail(
+
+  const GPassword(
     this.controller, {
     super.key,
     this.textInputAction = TextInputAction.next,
+    this.obscureText = true,
+    this.labelText = 'Password',
+    this.hintText = 'Enter your password',
     this.inputFormatters,
     this.validator,
-    this.hintText = 'Enter your email',
+    this.onIconPressed,
     this.onChanged,
   });
 
@@ -22,16 +29,21 @@ class GEmail extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       validator: validator,
-      inputFormatters: inputFormatters,
       onChanged: onChanged,
-      keyboardType: TextInputType.emailAddress,
+      inputFormatters: inputFormatters,
+      keyboardType: TextInputType.visiblePassword,
       textInputAction: textInputAction,
       controller: controller,
       maxLength: 50,
+      obscureText: obscureText,
       decoration: InputDecoration(
-        labelText: 'Email',
+        labelText: labelText,
         hintText: hintText,
-        prefixIcon: const Icon(Icons.email),
+        prefixIcon: Icon(obscureText ? Icons.password : Icons.text_fields),
+        suffixIcon: IconButton(
+          onPressed: onIconPressed,
+          icon: Icon(obscureText ? Icons.visibility : Icons.visibility_off),
+        ),
       ),
     );
   }

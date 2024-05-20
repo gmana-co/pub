@@ -1,4 +1,4 @@
-part of 'spinners.dart';
+part of 'gmana.dart';
 
 class DelayTween extends Tween<double> {
   final double delay;

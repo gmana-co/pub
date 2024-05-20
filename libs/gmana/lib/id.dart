@@ -1,4 +1,4 @@
-part of 'helpers.dart';
+part of 'gmana.dart';
 
 class Gid {
   final Random _random = Random();

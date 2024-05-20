@@ -1,4 +1,4 @@
-part of 'widgets.dart';
+part of 'gmana.dart';
 
 class GLinearProgress extends StatelessWidget {
   const GLinearProgress({super.key});

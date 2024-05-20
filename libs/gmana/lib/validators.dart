@@ -1,4 +1,4 @@
-part of 'helpers.dart';
+part of 'gmana.dart';
 
 class Validators {
   static String? validateEmail(String? value) {

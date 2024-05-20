@@ -1,6 +1,6 @@
-part of 'forms.dart';
+part of 'gmana.dart';
 
-class GText extends StatelessWidget {
+class GNumber extends StatelessWidget {
   final TextEditingController controller;
 
   final TextInputAction textInputAction;
@@ -10,7 +10,7 @@ class GText extends StatelessWidget {
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
 
-  const GText(
+  const GNumber(
     this.controller, {
     super.key,
     this.textInputAction = TextInputAction.next,
@@ -27,14 +27,14 @@ class GText extends StatelessWidget {
       validator: validator,
       onChanged: onChanged,
       inputFormatters: inputFormatters,
-      keyboardType: TextInputType.text,
+      keyboardType: TextInputType.number,
       textInputAction: textInputAction,
       controller: controller,
       maxLength: 50,
       decoration: InputDecoration(
         labelText: labelText,
         hintText: hintText,
-        prefixIcon: const Icon(Icons.text_fields),
+        prefixIcon: const Icon(Icons.numbers),
       ),
     );
   }

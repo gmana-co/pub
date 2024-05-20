@@ -1,4 +1,4 @@
-part of 'spinners.dart';
+part of 'gmana.dart';
 
 class GSpinnerDot extends StatefulWidget {
   final Color? color;

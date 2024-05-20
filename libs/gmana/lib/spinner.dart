@@ -1,4 +1,4 @@
-part of 'spinners.dart';
+part of 'gmana.dart';
 
 double _verticalPoint({
   required double value,

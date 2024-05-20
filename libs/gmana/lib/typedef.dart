@@ -1,4 +1,4 @@
-part of 'helpers.dart';
+part of 'gmana.dart';
 
 typedef GMap = Map<String, dynamic>;
 

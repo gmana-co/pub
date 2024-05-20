@@ -1,3 +1,7 @@
+## 0.0.7 (2024-05-20)
+
+- refactor structure of the library
+
 ## 0.0.6 (2024-03-27)
 
 - failure model

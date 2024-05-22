@@ -1,3 +1,7 @@
+## 0.0.8 (2024-05-22)
+
+- feat: update staggered_dots_wave
+
 ## 0.0.7 (2024-05-20)
 
 - refactor structure of the library

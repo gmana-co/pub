@@ -21,6 +21,7 @@ part 'reg.dart';
 part 'spinner.dart';
 part 'spinner_dot.dart';
 part 'spinner_wave.dart';
+part 'staggered_dots_wave.dart';
 part 'text.dart';
 part 'typedef.dart';
 part 'validator.dart';

@@ -46,3 +46,9 @@ extension StringExt on String {
 
   String toTitleCase() => replaceAll(RegExp(' +'), ' ').split(' ').map((str) => str.toSentenceCase()).join(' ');
 }
+
+extension StringNullableExt on String? {
+  String orEmpty() {
+    return this ?? "";
+  }
+}

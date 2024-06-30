@@ -1,5 +1,11 @@
 part of 'gmana_ext.dart';
 
+extension IntNullableExt on int? {
+  int orZero() {
+    return this ?? 0;
+  }
+}
+
 extension Normalize on num {
   /// Convert Celsius to Fahrenheit
   /// ```dart

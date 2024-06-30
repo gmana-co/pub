@@ -1,6 +1,10 @@
 part of 'gmana_ext.dart';
 
 extension ContextExt on BuildContext {
+  ColorScheme get colorScheme => Theme.of(this).colorScheme;
+
+  TextTheme get textTheme => Theme.of(this).textTheme;
+
   /// Push to a route with the given [Widget] and return generic Type T
   Future<T?> push<T>(Widget widget) {
     return Navigator.of(this).push<T>(MaterialPageRoute<T>(builder: (BuildContext context) => widget));

@@ -1,7 +1,5 @@
-# gmana-pub
+# gmana
 
-## install
-
-```yaml
+```bash
 flutter pub add gmana
 ```

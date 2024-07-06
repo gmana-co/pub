@@ -1,5 +1,8 @@
 # gmana-pub
 
+description: A collection of extensions for the gmana library
+deprecated: true
+
 ## install
 
 ```yaml

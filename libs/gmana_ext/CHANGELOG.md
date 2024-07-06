@@ -1,3 +1,7 @@
+## 0.0.13 (2024-07-06)
+
+- deprecated: use `gmana` instead
+
 ## 0.0.12 (2024-03-27)
 
 - update document

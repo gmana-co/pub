@@ -1,8 +1,9 @@
 name: gmana_ext
 description: gmana extensions is a utility helpers to faster development for internal.
-version: 0.0.12
+version: 0.0.13
 repository: https://github.com/sun-sreng/pub/tree/main/libs/gmana_ext
 issue_tracker: https://github.com/sun-sreng/pub/issues
+deprecated: true
 
 environment:
   sdk: ">=2.16.0 <4.0.0"

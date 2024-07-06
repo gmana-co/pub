@@ -1,3 +1,11 @@
+## 0.0.10 (2024-07-06)
+
+- feat: merge with gmana_ext
+
+## 0.0.9 (2024-07-06)
+
+- feat: add either function
+
 ## 0.0.8 (2024-05-22)
 
 - feat: update staggered_dots_wave

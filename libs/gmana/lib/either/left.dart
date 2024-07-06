@@ -6,16 +6,24 @@ class Left<L, R> extends Either<L, R> {
   const Left(this.value);
 
   @override
-  Either<L, R2> flatMap<R2>(Either<L, R2> Function(R right) f) => Left<L, R2>(value);
+  Either<L, R2> flatMap<R2>(Either<L, R2> Function(R right) f) {
+    return Left<L, R2>(value);
+  }
 
   @override
-  B fold<B>(B Function(L left) ifLeft, B Function(R right) ifRight) => ifLeft(value);
+  B fold<B>(B Function(L left) ifLeft, B Function(R right) ifRight) {
+    return ifLeft(value);
+  }
 
   @override
-  L getLeft() => value;
+  L getLeft() {
+    return value;
+  }
 
   @override
-  R getRight() => throw Exception("getRight() called on Left");
+  R getRight() {
+    throw Exception("getRight() called on Left");
+  }
 
   @override
   bool isLeft() => true;
@@ -24,5 +32,7 @@ class Left<L, R> extends Either<L, R> {
   bool isRight() => false;
 
   @override
-  Either<L, R2> map<R2>(R2 Function(R right) f) => Left<L, R2>(value);
+  Either<L, R2> map<R2>(R2 Function(R right) f) {
+    return Left<L, R2>(value);
+  }
 }

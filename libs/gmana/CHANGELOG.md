@@ -1,3 +1,7 @@
+## 0.0.12 (2024-07-10)
+
+- doc: add format
+
 ## 0.0.11 (2024-07-10)
 
 - feat: add GElevatedButton

@@ -1,12 +1,14 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
+
+import 'delay_tween.dart';
 
 class GSpinnerDot extends StatefulWidget {
   final Color? color;
-
   final double size;
   final IndexedWidgetBuilder? itemBuilder;
   final Duration duration;
   final AnimationController? controller;
+
   const GSpinnerDot({
     super.key,
     this.color,
@@ -52,13 +54,10 @@ class _GSpinnerDotState extends State<GSpinnerDot> with SingleTickerProviderStat
   @override
   void initState() {
     super.initState();
-
     _controller = (widget.controller ?? AnimationController(vsync: this, duration: widget.duration))..repeat();
   }
 
-  Widget _itemBuilder(int index) => widget.itemBuilder != null
-      ? widget.itemBuilder!(context, index)
-      : DecoratedBox(
-          decoration: BoxDecoration(color: widget.color, shape: BoxShape.circle),
-        );
+  Widget _itemBuilder(int index) {
+    return widget.itemBuilder != null ? widget.itemBuilder!(context, index) : DecoratedBox(decoration: BoxDecoration(color: widget.color, shape: BoxShape.circle));
+  }
 }

@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
 
 extension BreakpointUtils on BoxConstraints {
   bool get isDesktop => maxWidth > 1200;

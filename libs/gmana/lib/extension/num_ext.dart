@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 extension IntNullableExt on int? {
   int orZero() {
     return this ?? 0;

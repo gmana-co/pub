@@ -1,4 +1,6 @@
-part of '../gmana.dart';
+import 'dart:math' show sin, pi;
+
+import 'package:flutter/material.dart';
 
 class DelayTween extends Tween<double> {
   final double delay;

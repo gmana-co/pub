@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 extension CompactMap<T> on Iterable<T?> {
   /// ```dart
   /// [1, 2, null, 3].compactMap();

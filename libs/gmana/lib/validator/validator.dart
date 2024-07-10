@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 // Usage examples
 final emailValidators = [
   Validators.required(message: 'Email is required'),

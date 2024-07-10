@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'either.dart';
 
 class Left<L, R> extends Either<L, R> {
   final L value;

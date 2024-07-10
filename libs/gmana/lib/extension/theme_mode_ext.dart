@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
 
 extension ThemeModeExt on ThemeMode {
   IconData toThemeModeIcon() {

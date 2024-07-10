@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 extension IterableX<T extends num> on Iterable<T> {
   /// Extension method for Iterable<num>
   /// ```dart

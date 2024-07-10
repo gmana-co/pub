@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 extension StringExt on String {
   double get toDouble => double.tryParse(this) ?? 0.0;
 

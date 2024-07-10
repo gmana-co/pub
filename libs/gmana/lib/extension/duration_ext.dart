@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 extension HumanizedDuration on Duration {
   String toHumanizedString() {
     final seconds = '${inSeconds % 60}'.padLeft(2, '0');

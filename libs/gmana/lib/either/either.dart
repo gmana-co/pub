@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 ///```dart
 /// void main() {
 ///   final result1 = divide(10, 2);

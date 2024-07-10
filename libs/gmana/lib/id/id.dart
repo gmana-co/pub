@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'dart:math';
 
 class Gid {
   final Random _random = Random();

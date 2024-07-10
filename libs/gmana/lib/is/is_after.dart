@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'is_date.dart';
 
 /// check if the string is a date that's after the specified date
 ///

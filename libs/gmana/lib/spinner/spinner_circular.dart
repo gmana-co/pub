@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
 
 class GCircularProgress extends StatelessWidget {
   const GCircularProgress({super.key});

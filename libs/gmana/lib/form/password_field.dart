@@ -1,4 +1,6 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
+
+import 'base_field.dart';
 
 class GPasswordField extends GBaseField {
   const GPasswordField({

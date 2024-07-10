@@ -1,3 +1,7 @@
+## 0.0.11 (2024-07-10)
+
+- feat: add GElevatedButton
+
 ## 0.0.10 (2024-07-06)
 
 - feat: merge with gmana_ext

@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
 
 class SizedBoxHeight extends StatelessWidget {
   const SizedBoxHeight({super.key});

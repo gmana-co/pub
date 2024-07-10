@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:gmana/regex/surrogate_pairs_reg.dart';
 
 /// check if the string contains any surrogate pairs chars
 bool isSurrogatePair(String str) {

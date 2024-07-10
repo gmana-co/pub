@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:gmana/regex/credit_card_reg.dart';
 
 bool isCreditCard(String str) {
   final sanitized = str.replaceAll(RegExp('[^0-9]+'), '');

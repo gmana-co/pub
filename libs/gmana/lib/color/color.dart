@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
 
 Color darken(Color color, [double amount = .1]) {
   assert(amount >= 0 && amount <= 1);

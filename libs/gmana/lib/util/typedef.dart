@@ -1,4 +1,5 @@
-part of '../gmana.dart';
+import 'package:gmana/either/either.dart';
+import 'package:gmana/util/unit.dart';
 
 /// Functional type definition for Either
 typedef EitherFailure<T> = Either<Failure, T>;

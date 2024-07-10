@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 /// check if the string is a date
 bool isDate(String str) {
   try {

@@ -1,4 +1,7 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import 'base_field.dart';
 
 /// GNumberField
 /// ```dart

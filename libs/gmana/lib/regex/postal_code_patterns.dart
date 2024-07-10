@@ -1,4 +1,7 @@
-part of '../gmana.dart';
+import 'five_digit.dart';
+import 'four_digit.dart';
+import 'six_digit.dart';
+import 'three_digit.dart';
 
 Map<String, RegExp> postalCodePatterns = {
   'AD': RegExp(r'^AD\d{3}$'),

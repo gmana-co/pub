@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 /// check if string [str] matches the [pattern].
 bool matches(String str, String pattern) {
   final re = RegExp(pattern);

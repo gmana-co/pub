@@ -1,4 +1,6 @@
-part of '../gmana.dart';
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
 
 extension FromJSONStringExt on String {
   IconData toIconData() {

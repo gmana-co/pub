@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 bool isFQDN(String str, {bool requireTld = true, bool allowUnderscores = false}) {
   final parts = str.split('.');
   if (requireTld) {

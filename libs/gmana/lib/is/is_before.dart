@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:gmana/is/is_date.dart';
 
 /// check if the string is a date that's before the specified date
 ///

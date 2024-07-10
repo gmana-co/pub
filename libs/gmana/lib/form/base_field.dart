@@ -1,4 +1,5 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 abstract class GBaseField extends StatelessWidget {
   final TextEditingController controller;

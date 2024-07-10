@@ -1,7 +1,7 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
 
-class GLinearProgress extends StatelessWidget {
-  const GLinearProgress({super.key});
+class GSpinnerLinear extends StatelessWidget {
+  const GSpinnerLinear({super.key});
 
   @override
   Widget build(BuildContext context) {

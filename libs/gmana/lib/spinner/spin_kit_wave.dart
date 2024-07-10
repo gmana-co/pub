@@ -1,33 +1,17 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
 
-class ScaleYWidget extends AnimatedWidget {
-  final Widget child;
-
-  final Alignment alignment;
-  const ScaleYWidget({
-    super.key,
-    required Animation<double> scaleY,
-    required this.child,
-    this.alignment = Alignment.center,
-  }) : super(listenable: scaleY);
-
-  Animation<double> get scale => listenable as Animation<double>;
-
-  @override
-  Widget build(BuildContext context) {
-    return Transform(transform: Matrix4.identity()..scale(1.0, scale.value, 1.0), alignment: alignment, child: child);
-  }
-}
+import 'delay_tween.dart';
+import 'scale_y_widget.dart';
 
 class SpinKitWave extends StatefulWidget {
   final Color? color;
-
+  final SpinKitWaveType type;
   final int itemCount;
   final double size;
-  final SpinKitWaveType type;
   final IndexedWidgetBuilder? itemBuilder;
   final Duration duration;
   final AnimationController? controller;
+
   const SpinKitWave({
     super.key,
     this.color,
@@ -38,7 +22,7 @@ class SpinKitWave extends StatefulWidget {
     this.duration = const Duration(milliseconds: 1200),
     this.controller,
   })  : assert(!(itemBuilder is IndexedWidgetBuilder && color is Color) && !(itemBuilder == null && color == null), 'You should specify either a itemBuilder or a color'),
-        assert(itemCount >= 2, 'itemCount Cant be less then 2 ');
+        assert(itemCount >= 2, 'itemCount cannot be less than 2');
 
   @override
   State<SpinKitWave> createState() => _SpinKitWaveState();
@@ -91,7 +75,6 @@ class _SpinKitWaveState extends State<SpinKitWave> with SingleTickerProviderStat
   @override
   void initState() {
     super.initState();
-
     _controller = (widget.controller ?? AnimationController(vsync: this, duration: widget.duration))..repeat();
   }
 
@@ -107,10 +90,7 @@ class _SpinKitWaveState extends State<SpinKitWave> with SingleTickerProviderStat
     return <double>[
       ...List<double>.generate(count ~/ 2, (index) => -1.0 + (index * 0.1) + 0.1).reversed,
       if (count.isOdd) -1.0,
-      ...List<double>.generate(
-        count ~/ 2,
-        (index) => -1.0 - (index * 0.1) - (count.isOdd ? 0.1 : 0.0),
-      ),
+      ...List<double>.generate(count ~/ 2, (index) => -1.0 - (index * 0.1) - (count.isOdd ? 0.1 : 0.0)),
     ];
   }
 
@@ -120,10 +100,7 @@ class _SpinKitWaveState extends State<SpinKitWave> with SingleTickerProviderStat
     return <double>[
       ...List<double>.generate(count ~/ 2, (index) => -1.0 - (index * 0.1) - 0.1).reversed,
       if (count.isOdd) -1.0,
-      ...List<double>.generate(
-        count ~/ 2,
-        (index) => -1.0 + (index * 0.1) + (count.isOdd ? 0.1 : 0.0),
-      ),
+      ...List<double>.generate(count ~/ 2, (index) => -1.0 + (index * 0.1) + (count.isOdd ? 0.1 : 0.0)),
     ];
   }
 }

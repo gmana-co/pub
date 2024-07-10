@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 /// Used instead of `void` as a return statement for a function when no value is to be returned.
 ///
 /// Read [this article](https://medium.com/flutter-community/the-curious-case-of-void-in-dart-f0535705e529)

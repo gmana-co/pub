@@ -1,5 +1,3 @@
-part of '../gmana.dart';
-
 /// check if the string [str] is a number that's divisible by another
 ///
 /// [n] is a String or an int.

@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:gmana/regex/alphanumeric_reg.dart';
 
 /// check if the string [str] contains only letters and numbers
 bool isAlphanumeric(String str) {

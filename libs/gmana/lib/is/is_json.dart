@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'dart:convert';
 
 /// check if the string is valid JSON
 bool isJson(String str) {

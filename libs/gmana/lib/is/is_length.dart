@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:gmana/regex/surrogate_pairs_reg.dart';
 
 /// check if the length of the string [str] falls in a range
 bool isLength(String str, int min, [int? max]) {

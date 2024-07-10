@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:flutter/material.dart';
 
 extension ContextExt on BuildContext {
   ColorScheme get colorScheme => Theme.of(this).colorScheme;

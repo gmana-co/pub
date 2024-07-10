@@ -1,4 +1,4 @@
-part of '../gmana.dart';
+import 'package:gmana/regex/uuid_reg.dart';
 
 /// check if the string is a UUID (version 3, 4 or 5).
 bool isUuid(String? str, [String? version]) {

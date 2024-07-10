@@ -33,6 +33,8 @@ extension Normalize on num {
     num normalizedRangeMin = 0.0,
     num normalizedRangeMax = 1.0,
   ]) {
-    return (normalizedRangeMax - normalizedRangeMin) * ((this - selfRangeMin) / (selfRangeMax - selfRangeMin)) + normalizedRangeMin;
+    return (normalizedRangeMax - normalizedRangeMin) *
+            ((this - selfRangeMin) / (selfRangeMax - selfRangeMin)) +
+        normalizedRangeMin;
   }
 }

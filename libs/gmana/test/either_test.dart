@@ -98,7 +98,9 @@ void main() {
     });
 
     test('chaining operations with map and flatMap', () {
-      final result = divide(10, 2).map((value) => value * 2).flatMap((value) => divide(value, 2));
+      final result = divide(10, 2)
+          .map((value) => value * 2)
+          .flatMap((value) => divide(value, 2));
 
       expect(result, isA<Right>());
       expect(result.getRight(), 5);

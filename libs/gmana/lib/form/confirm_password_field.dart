@@ -73,10 +73,12 @@ class _GConfirmPasswordFieldContent extends StatefulWidget {
   const _GConfirmPasswordFieldContent({required this.baseField});
 
   @override
-  _GConfirmPasswordFieldContentState createState() => _GConfirmPasswordFieldContentState();
+  _GConfirmPasswordFieldContentState createState() =>
+      _GConfirmPasswordFieldContentState();
 }
 
-class _GConfirmPasswordFieldContentState extends State<_GConfirmPasswordFieldContent> {
+class _GConfirmPasswordFieldContentState
+    extends State<_GConfirmPasswordFieldContent> {
   bool _obscureText = true;
 
   @override

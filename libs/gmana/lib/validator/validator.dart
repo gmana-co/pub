@@ -6,7 +6,8 @@ final emailValidators = [
 
 final passwordValidators = [
   Validators.required(message: 'Password is required'),
-  Validators.minLength(8, message: 'Password must be at least 8 characters long'),
+  Validators.minLength(8,
+      message: 'Password must be at least 8 characters long'),
   Validators.pattern(
     r'(?=.*[A-Z])',
     message: 'Password must have at least one uppercase character',
@@ -20,7 +21,8 @@ final passwordValidators = [
 // Custom validator example
 final usernameValidators = [
   Validators.required(message: 'Username is required'),
-  Validators.minLength(3, message: 'Username must be at least 3 characters long'),
+  Validators.minLength(3,
+      message: 'Username must be at least 3 characters long'),
   Validators.maxLength(20, message: 'Username must not exceed 20 characters'),
   Validators.custom(
     (value) => value!.contains('@') ? '' : null,
@@ -29,11 +31,14 @@ final usernameValidators = [
 ];
 
 // Function to use the validators
-String? validateEmail(String? value) => Validators.validate(value, emailValidators);
+String? validateEmail(String? value) =>
+    Validators.validate(value, emailValidators);
 
-String? validatePassword(String? value) => Validators.validate(value, passwordValidators);
+String? validatePassword(String? value) =>
+    Validators.validate(value, passwordValidators);
 
-String? validateUsername(String? value) => Validators.validate(value, usernameValidators);
+String? validateUsername(String? value) =>
+    Validators.validate(value, usernameValidators);
 typedef ValidationFunction = String? Function(String?);
 
 class ValidationRule {
@@ -46,13 +51,17 @@ class ValidationRule {
 }
 
 class Validators {
-  static ValidationRule custom(ValidationFunction func, {required String message}) {
+  static ValidationRule custom(ValidationFunction func,
+      {required String message}) {
     return ValidationRule(func, message);
   }
 
   static ValidationRule email({String message = 'Invalid email format'}) {
     return ValidationRule(
-      (value) => RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value ?? '') ? null : '',
+      (value) =>
+          RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value ?? '')
+              ? null
+              : '',
       message,
     );
   }

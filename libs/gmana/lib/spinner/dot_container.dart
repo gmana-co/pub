@@ -35,10 +35,16 @@ class DotContainer extends StatelessWidget {
             Opacity(
               opacity: controller.value <= offsetInterval.end ? 1 : 0,
               child: Transform.translate(
-                offset: Tween<Offset>(begin: Offset.zero, end: Offset(0, maxDy)).animate(CurvedAnimation(parent: controller, curve: offsetInterval)).value,
+                offset: Tween<Offset>(begin: Offset.zero, end: Offset(0, maxDy))
+                    .animate(CurvedAnimation(
+                        parent: controller, curve: offsetInterval))
+                    .value,
                 child: Container(
                   width: size * 0.13,
-                  height: Tween<double>(begin: size * 0.13, end: maxHeight).animate(CurvedAnimation(parent: controller, curve: heightInterval)).value,
+                  height: Tween<double>(begin: size * 0.13, end: maxHeight)
+                      .animate(CurvedAnimation(
+                          parent: controller, curve: heightInterval))
+                      .value,
                   decoration: BoxDecoration(
                     color: color,
                     borderRadius: BorderRadius.circular(size),
@@ -49,10 +55,16 @@ class DotContainer extends StatelessWidget {
             Opacity(
               opacity: controller.value >= offsetInterval.end ? 1 : 0,
               child: Transform.translate(
-                offset: Tween<Offset>(begin: Offset(0, maxDy), end: Offset.zero).animate(CurvedAnimation(parent: controller, curve: reverseOffsetInterval)).value,
+                offset: Tween<Offset>(begin: Offset(0, maxDy), end: Offset.zero)
+                    .animate(CurvedAnimation(
+                        parent: controller, curve: reverseOffsetInterval))
+                    .value,
                 child: Container(
                   width: size * 0.13,
-                  height: Tween<double>(end: size * 0.13, begin: maxHeight).animate(CurvedAnimation(parent: controller, curve: reverseHeightInterval)).value,
+                  height: Tween<double>(end: size * 0.13, begin: maxHeight)
+                      .animate(CurvedAnimation(
+                          parent: controller, curve: reverseHeightInterval))
+                      .value,
                   decoration: BoxDecoration(
                     color: color,
                     borderRadius: BorderRadius.circular(size),

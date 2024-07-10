@@ -4,9 +4,13 @@ void main() {
   final result1 = divide(10, 2);
   final result2 = divide(5, 0);
 
-  result1.fold((error) => print('Error: $error'), (value) => print('Result: $value')); // Prints: Result: 5
+  result1.fold((error) => print('Error: $error'),
+      (value) => print('Result: $value')); // Prints: Result: 5
 
-  result2.fold((error) => print('Error: $error'), (value) => print('Result: $value')); // Prints: Error: Cannot divide by zero
+  result2.fold(
+      (error) => print('Error: $error'),
+      (value) =>
+          print('Result: $value')); // Prints: Error: Cannot divide by zero
 
   // Using map
   final mappedResult = result1.map((value) => value * 2);

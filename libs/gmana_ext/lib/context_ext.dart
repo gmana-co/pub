@@ -7,7 +7,8 @@ extension ContextExt on BuildContext {
 
   /// Push to a route with the given [Widget] and return generic Type T
   Future<T?> push<T>(Widget widget) {
-    return Navigator.of(this).push<T>(MaterialPageRoute<T>(builder: (BuildContext context) => widget));
+    return Navigator.of(this).push<T>(
+        MaterialPageRoute<T>(builder: (BuildContext context) => widget));
   }
 
   /// Push to a given route and clear the existing navigation stack

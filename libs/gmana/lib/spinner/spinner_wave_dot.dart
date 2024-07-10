@@ -16,7 +16,8 @@ class SpinnerWaveDot extends StatefulWidget {
   State<SpinnerWaveDot> createState() => _SpinnerWaveDotState();
 }
 
-class _SpinnerWaveDotState extends State<SpinnerWaveDot> with SingleTickerProviderStateMixin {
+class _SpinnerWaveDotState extends State<SpinnerWaveDot>
+    with SingleTickerProviderStateMixin {
   late AnimationController _offsetController;
 
   @override

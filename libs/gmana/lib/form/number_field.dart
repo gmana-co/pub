@@ -34,7 +34,7 @@ class GNumberField extends GBaseField {
             FilteringTextInputFormatter.digitsOnly,
             ...?inputFormatters,
           ],
-          prefixIcon: Icons.numbers,
+          prefixIcon: Icons.onetwothree,
         );
 
   @override

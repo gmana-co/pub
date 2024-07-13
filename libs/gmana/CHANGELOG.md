@@ -1,3 +1,7 @@
+## 0.0.12 (2024-07-13)
+
+- doc: add validators
+
 ## 0.0.12 (2024-07-10)
 
 - doc: add format

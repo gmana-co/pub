@@ -12,10 +12,9 @@ class GPasswordField extends GBaseField {
     super.inputFormatters,
     super.validator,
     super.onChanged,
-  }) : super(
-          keyboardType: TextInputType.visiblePassword,
-          prefixIcon: Icons.lock,
-        );
+    super.keyboardType = TextInputType.visiblePassword,
+    super.prefixIcon = Icons.lock,
+  });
 
   @override
   Widget build(BuildContext context) {

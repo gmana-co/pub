@@ -12,10 +12,9 @@ class GTextField extends GBaseField {
     super.inputFormatters,
     super.validator,
     super.onChanged,
-    super.prefixIcon,
-  }) : super(
-          keyboardType: TextInputType.text,
-        );
+    super.prefixIcon = Icons.text_fields,
+    super.keyboardType = TextInputType.text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ class GTextField extends GBaseField {
       decoration: InputDecoration(
         labelText: labelText,
         hintText: hintText,
-        prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
+        prefixIcon: Icon(prefixIcon),
       ),
     );
   }

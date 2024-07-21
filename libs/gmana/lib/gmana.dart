@@ -1,6 +1,7 @@
 library gmana;
 
 export 'color/color.dart';
+export 'design_system/design_system.dart';
 export 'either/either.dart';
 export 'either/left.dart';
 export 'either/right.dart';

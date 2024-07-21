@@ -1,6 +1,6 @@
 name: gmana
 description: gmana project for flutter widgets and other utilities for convenient develop and consistency.
-version: 0.0.13
+version: 0.0.14
 repository: https://github.com/sun-sreng/pub/tree/main/libs/gmana_ext
 issue_tracker: https://github.com/sun-sreng/pub/issues
 
@@ -11,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  logger: ^2.4.0
 
 dev_dependencies:
   flutter_test:

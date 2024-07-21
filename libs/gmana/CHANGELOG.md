@@ -1,4 +1,9 @@
-## 0.0.12 (2024-07-13)
+## 0.0.14 (2024-07-21)
+
+- feat: theme_mode helper
+- feat: locale helper
+
+## 0.0.13 (2024-07-13)
 
 - doc: add validators
 

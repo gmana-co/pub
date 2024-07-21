@@ -46,26 +46,31 @@ String? validatePassword(
   ];
 
   if (requirements.contains(PasswordRequirement.minLength)) {
-    rules.add(Validators.minLength(minLength, message: 'Password must be at least $minLength characters long'));
+    rules.add(Validators.minLength(minLength,
+        message: 'Password must be at least $minLength characters long'));
   }
 
   if (requirements.contains(PasswordRequirement.upperCase)) {
-    rules.add(Validators.pattern(r'(?=.*[A-Z])', message: 'Password must have at least one uppercase character'));
+    rules.add(Validators.pattern(r'(?=.*[A-Z])',
+        message: 'Password must have at least one uppercase character'));
   }
 
   if (requirements.contains(PasswordRequirement.lowerCase)) {
-    rules.add(Validators.pattern(r'(?=.*[a-z])', message: 'Password must have at least one lowercase character'));
+    rules.add(Validators.pattern(r'(?=.*[a-z])',
+        message: 'Password must have at least one lowercase character'));
   }
 
   if (requirements.contains(PasswordRequirement.digit)) {
-    rules.add(Validators.pattern(r'(?=.*\d)', message: 'Password must have at least one digit'));
+    rules.add(Validators.pattern(r'(?=.*\d)',
+        message: 'Password must have at least one digit'));
   }
 
   if (requirements.contains(PasswordRequirement.special)) {
     final escapedSpecialChars = RegExp.escape(specialCharacters);
     rules.add(Validators.pattern(
       '(?=.*[$escapedSpecialChars])',
-      message: 'Password must have at least one special character ($specialCharacters)',
+      message:
+          'Password must have at least one special character ($specialCharacters)',
     ));
   }
 

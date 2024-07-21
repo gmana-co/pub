@@ -10,11 +10,16 @@ class UsernameValidator {
   }) {
     return [
       Validators.required(message: 'Username is required'),
-      Validators.minLength(minLength, message: 'Username must be at least $minLength characters long'),
-      Validators.maxLength(maxLength, message: 'Username must not exceed $maxLength characters'),
+      Validators.minLength(minLength,
+          message: 'Username must be at least $minLength characters long'),
+      Validators.maxLength(maxLength,
+          message: 'Username must not exceed $maxLength characters'),
       if (forbiddenCharacters.isNotEmpty)
         Validators.custom(
-          (value) => value != null && forbiddenCharacters.any((char) => value.contains(char)) ? '' : null,
+          (value) => value != null &&
+                  forbiddenCharacters.any((char) => value.contains(char))
+              ? ''
+              : null,
           message: 'Username cannot contain: ${forbiddenCharacters.join(', ')}',
         ),
       if (allowedPattern != null)
@@ -34,13 +39,18 @@ class UsernameValidator {
   }) {
     final rules = <ValidationRule>[
       Validators.required(message: 'Username is required'),
-      Validators.minLength(minLength, message: 'Username must be at least $minLength characters long'),
-      Validators.maxLength(maxLength, message: 'Username must not exceed $maxLength characters'),
+      Validators.minLength(minLength,
+          message: 'Username must be at least $minLength characters long'),
+      Validators.maxLength(maxLength,
+          message: 'Username must not exceed $maxLength characters'),
     ];
 
     if (forbiddenCharacters.isNotEmpty) {
       rules.add(Validators.custom(
-        (value) => value != null && forbiddenCharacters.any((char) => value.contains(char)) ? '' : null,
+        (value) => value != null &&
+                forbiddenCharacters.any((char) => value.contains(char))
+            ? ''
+            : null,
         message: 'Username cannot contain: ${forbiddenCharacters.join(', ')}',
       ));
     }

@@ -9,7 +9,8 @@ class ValidationRules {
 
   static final List<ValidationRule> password = [
     Validators.required(message: 'Password is required'),
-    Validators.minLength(8, message: 'Password must be at least 8 characters long'),
+    Validators.minLength(8,
+        message: 'Password must be at least 8 characters long'),
     Validators.pattern(
       r'(?=.*[A-Z])',
       message: 'Password must have at least one uppercase character',
@@ -22,7 +23,8 @@ class ValidationRules {
 
   static final List<ValidationRule> username = [
     Validators.required(message: 'Username is required'),
-    Validators.minLength(3, message: 'Username must be at least 3 characters long'),
+    Validators.minLength(3,
+        message: 'Username must be at least 3 characters long'),
     Validators.maxLength(20, message: 'Username must not exceed 20 characters'),
     Validators.custom(
       (value) => value!.contains('@') ? '' : null,

@@ -16,7 +16,9 @@ String fromLocale(Locale locale) {
   final scriptCode = locale.scriptCode;
 
   if (scriptCode != null) {
-    return countryCode != null ? '${languageCode}_${scriptCode}_$countryCode' : '${languageCode}_$scriptCode';
+    return countryCode != null
+        ? '${languageCode}_${scriptCode}_$countryCode'
+        : '${languageCode}_$scriptCode';
   } else if (countryCode != null && countryCode.isNotEmpty) {
     return '${languageCode}_$countryCode';
   } else {

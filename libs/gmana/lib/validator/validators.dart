@@ -3,7 +3,8 @@ import 'validation_rule.dart';
 class Validators {
   static const _emailRegex = r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$';
 
-  static ValidationRule custom(ValidationFunction func, {required String message}) {
+  static ValidationRule custom(ValidationFunction func,
+      {required String message}) {
     return ValidationRule(func, message);
   }
 
@@ -28,28 +29,33 @@ class Validators {
     );
   }
 
-  static ValidationRule oneLowerCase({String message = 'Must contain at least one lowercase letter'}) {
+  static ValidationRule oneLowerCase(
+      {String message = 'Must contain at least one lowercase letter'}) {
     return ValidationRule(
       (value) => RegExp(r'[a-z]').hasMatch(value ?? '') ? null : '',
       message,
     );
   }
 
-  static ValidationRule oneNumber({String message = 'Must contain at least one number'}) {
+  static ValidationRule oneNumber(
+      {String message = 'Must contain at least one number'}) {
     return ValidationRule(
       (value) => RegExp(r'[0-9]').hasMatch(value ?? '') ? null : '',
       message,
     );
   }
 
-  static ValidationRule oneSpecial({String message = 'Must contain at least one special character'}) {
+  static ValidationRule oneSpecial(
+      {String message = 'Must contain at least one special character'}) {
     return ValidationRule(
-      (value) => RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value ?? '') ? null : '',
+      (value) =>
+          RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value ?? '') ? null : '',
       message,
     );
   }
 
-  static ValidationRule oneUpperCase({String message = 'Must contain at least one uppercase letter'}) {
+  static ValidationRule oneUpperCase(
+      {String message = 'Must contain at least one uppercase letter'}) {
     return ValidationRule(
       (value) => RegExp(r'[A-Z]').hasMatch(value ?? '') ? null : '',
       message,

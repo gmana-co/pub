@@ -8,7 +8,11 @@ export 'validation_rule.dart';
 export 'validation_rules.dart';
 export 'validators.dart';
 
-String? validateEmail(String? value) => Validators.validate(value, ValidationRules.email);
-String? validateOtp(String? value) => Validators.validate(value, ValidationRules.otp);
-String? validatePassword(String? value) => Validators.validate(value, ValidationRules.password);
-String? validateUsername(String? value) => Validators.validate(value, ValidationRules.username);
+String? validateEmail(String? value) =>
+    Validators.validate(value, ValidationRules.email);
+String? validateOtp(String? value) =>
+    Validators.validate(value, ValidationRules.otp);
+String? validatePassword(String? value) =>
+    Validators.validate(value, ValidationRules.password);
+String? validateUsername(String? value) =>
+    Validators.validate(value, ValidationRules.username);

@@ -43,14 +43,6 @@ class _TLImageCarouselState extends State<TLImageCarousel> {
   int position = 1;
 
   @override
-  void initState() {
-    super.initState();
-    setState(() {
-      images = widget.images;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     return images.isEmpty
         ? const SizedBox()
@@ -65,8 +57,7 @@ class _TLImageCarouselState extends State<TLImageCarousel> {
                     viewportFraction: 1.0,
                     height: widget.height,
                     autoPlay: widget.autoPlay,
-                    autoPlayInterval:
-                        widget.autoPlayInterval ?? const Duration(seconds: 3),
+                    autoPlayInterval: widget.autoPlayInterval ?? const Duration(seconds: 3),
                     autoPlayCurve: widget.curves ?? Curves.fastOutSlowIn,
                     onPageChanged: (index, reason) {
                       // Update the state for current image position
@@ -131,16 +122,10 @@ class _TLImageCarouselState extends State<TLImageCarousel> {
                         return Container(
                           width: kSMedium,
                           height: kSMedium,
-                          margin: const EdgeInsets.symmetric(
-                              vertical: 8.0, horizontal: 4.0),
+                          margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color:
-                                (Theme.of(context).brightness == Brightness.dark
-                                        ? Colors.white
-                                        : widget.dotColor)
-                                    .withOpacity(
-                                        position == entry.key + 1 ? 0.9 : 0.4),
+                            color: (Theme.of(context).brightness == Brightness.dark ? Colors.white : widget.dotColor).withOpacity(position == entry.key + 1 ? 0.9 : 0.4),
                           ),
                         );
                       }).toList(),
@@ -150,5 +135,13 @@ class _TLImageCarouselState extends State<TLImageCarousel> {
               ],
             ),
           );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    setState(() {
+      images = widget.images;
+    });
   }
 }

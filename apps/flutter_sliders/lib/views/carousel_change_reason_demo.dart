@@ -14,7 +14,7 @@ class CarouselChangeReasonDemo extends StatefulWidget {
 
 class _CarouselChangeReasonDemoState extends State<CarouselChangeReasonDemo> {
   String reason = '';
-  final CarouselController _controller = CarouselController();
+  final GCarouselController _controller = GCarouselController();
 
   @override
   Widget build(BuildContext context) {

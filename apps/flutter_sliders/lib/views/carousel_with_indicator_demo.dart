@@ -14,8 +14,7 @@ class CarouselWithIndicatorDemo extends StatefulWidget {
 
 class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
   int _current = 0;
-  final CarouselController _controller = CarouselController();
-
+  final GCarouselController _controller = GCarouselController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

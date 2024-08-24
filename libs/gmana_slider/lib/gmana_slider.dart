@@ -41,7 +41,7 @@ class GManaSlider extends StatefulWidget {
   final ExtendedIndexedWidgetBuilder? itemBuilder;
 
   /// A [MapController], used to control the map.
-  final CarouselControllerImpl _carouselController;
+  final GCarouselControllerImpl _carouselController;
 
   final int? itemCount;
 
@@ -49,11 +49,11 @@ class GManaSlider extends StatefulWidget {
     required this.items,
     required this.options,
     this.disableGesture,
-    CarouselController? carouselController,
+    GCarouselController? carouselController,
     super.key,
   })  : itemBuilder = null,
         itemCount = items != null ? items.length : 0,
-        _carouselController = carouselController != null ? carouselController as CarouselControllerImpl : CarouselController() as CarouselControllerImpl;
+        _carouselController = carouselController != null ? carouselController as GCarouselControllerImpl : GCarouselController() as GCarouselControllerImpl;
 
   /// The on demand item builder constructor
   GManaSlider.builder({
@@ -61,10 +61,10 @@ class GManaSlider extends StatefulWidget {
     required this.itemBuilder,
     required this.options,
     this.disableGesture,
-    CarouselController? carouselController,
+    GCarouselController? carouselController,
     super.key,
   })  : items = null,
-        _carouselController = carouselController != null ? carouselController as CarouselControllerImpl : CarouselController() as CarouselControllerImpl;
+        _carouselController = carouselController != null ? carouselController as GCarouselControllerImpl : GCarouselController() as GCarouselControllerImpl;
 
   @override
   // ignore: no_logic_in_create_state
@@ -72,7 +72,7 @@ class GManaSlider extends StatefulWidget {
 }
 
 class GManaSliderState extends State<GManaSlider> with TickerProviderStateMixin {
-  final CarouselControllerImpl carouselController;
+  final GCarouselControllerImpl carouselController;
   Timer? timer;
 
   CarouselState? carouselState;

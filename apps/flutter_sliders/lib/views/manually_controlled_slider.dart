@@ -13,7 +13,7 @@ class ManuallyControlledSlider extends StatefulWidget {
 }
 
 class _ManuallyControlledSliderState extends State<ManuallyControlledSlider> {
-  final CarouselController _controller = CarouselController();
+  final GCarouselController _controller = GCarouselController();
 
   @override
   Widget build(BuildContext context) {
